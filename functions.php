@@ -170,3 +170,38 @@ function secure_cf7_message_field($result, $tag)
 
 	return $result;
 }
+
+// Validation for Email field
+add_filter('wpcf7_validate_email', 'cf7_protect_email_field', 20, 2);
+add_filter('wpcf7_validate_email*', 'cf7_protect_email_field', 20, 2);
+
+function cf7_protect_email_field($result, $tag)
+{
+	if ($tag->name !== 'your-email') {
+		return $result;
+	}
+
+	$email = isset($_POST['your-email']) ? wp_unslash($_POST['your-email']) : '';
+	$email = trim($email);
+
+	if (preg_match('/[\r\n]/', $email)) {
+		$result->invalidate($tag, 'Invalid email address.');
+		return $result;
+	}
+
+	if (preg_match('/(bcc:|cc:|content-type:|mime-version:|multipart\/mixed)/i', $email)) {
+		$result->invalidate($tag, 'Invalid email address.');
+		return $result;
+	}
+
+	$sanitized_email = sanitize_email($email);
+
+	if (empty($sanitized_email) || !is_email($sanitized_email)) {
+		$result->invalidate($tag, 'Please enter a valid email address.');
+		return $result;
+	}
+
+	$_POST['your-email'] = $sanitized_email;
+
+	return $result;
+}
