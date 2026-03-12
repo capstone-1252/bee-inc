@@ -205,3 +205,25 @@ function cf7_protect_email_field($result, $tag)
 
 	return $result;
 }
+
+add_action('wp_head', function() {
+    if (is_page() || is_single()) {
+        echo '<meta name="description" content="' . get_the_excerpt() . '">';
+    }
+});
+
+add_action('wp_head', function() {
+    echo '<meta property="og:title" content="' . get_the_title() . '">';
+});
+
+add_action('wp_head', function() {
+?>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebPage",
+ "name":"<?php echo get_the_title(); ?>"
+}
+</script>
+<?php
+});
