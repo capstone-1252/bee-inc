@@ -1,0 +1,24 @@
+name: Deploy to Siteground
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy to Siteground
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SITEGROUND_HOST }}
+          username: ${{ secrets.SITEGROUND_USER }}
+          key: ${{ secrets.SITEGROUND_SSH_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          port: 18765
+          script: |
+            cd /home/username/public_html/dev
+            git pull origin main
