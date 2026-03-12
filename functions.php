@@ -80,6 +80,8 @@ require_once get_theme_file_path('inc/register-block-styles.php');
 // Block pattern and block category examples.
 require_once get_theme_file_path('inc/register-block-patterns.php');
 
+// DISREGARD LINE - Test commit for deployment. 
+
 // For future Text fields use and modify this code
 // Validation for name field
 add_filter('wpcf7_validate_text*', 'my_cf7_validate_name', 20, 2);
