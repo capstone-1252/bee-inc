@@ -30,3 +30,9 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+
+.header-cart-icon {
+	width: 3rem;
+	height: 3rem;
+	display: block;
+}
