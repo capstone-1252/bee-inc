@@ -1,15 +1,26 @@
-<header class="wp-block-site-header" style="padding-left:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60)">
-<h1>Ellura Collections</h1>
+<!-- wp:group {"tagName":"header","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+<header class="wp-block-group" style="display:flex;justify-content:space-between;flex-wrap:wrap;padding-left:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60)">
 
-<nav>
-  <ul>
-    <li>About us</li>
-    <li>Women's</li>
-    <li>Men's</li>
-    <li>Essentials</li>
-    <li>Children's</li>
-    <li>Contact Us</li>
-  </ul>
-</nav>
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+  <div class="wp-block-group" style="display:flex;flex-wrap:nowrap;align-items:center;gap:10px">
+    
+    <!-- wp:site-logo {"width":40,"shouldScale":true} /-->
+    
+    <!-- wp:site-title {"level":1,"content":"Ellura Collections","isLink":true} /-->
+    
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:navigation {"overlayMenu":"always","overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"right"}} -->
   
+  <!-- wp:navigation-link {"label":"About Us","url":"#"} /-->
+  <!-- wp:navigation-link {"label":"Women's","url":"#"} /-->
+  <!-- wp:navigation-link {"label":"Men's","url":"#"} /-->
+  <!-- wp:navigation-link {"label":"Essentials","url":"#"} /-->
+  <!-- wp:navigation-link {"label":"Children's","url":"#"} /-->
+  <!-- wp:navigation-link {"label":"Contact Us","url":"#"} /-->
+  
+  <!-- /wp:navigation -->
+
 </header>
+<!-- /wp:group -->
