@@ -19,8 +19,6 @@ jobs:
           key: ${{ secrets.SITEGROUND_SSH_KEY }}
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: 18765
-          env:
-          USER: ${{ secrets.SITEGROUND_USER }}
           script: |
-            cd /home/$USER/public_html/dev
+            cd /home/username/public_html/dev
             git pull origin main
