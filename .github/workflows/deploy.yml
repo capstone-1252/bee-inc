@@ -32,5 +32,5 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: 18765
           script: |
-            cd /home/sfolard@gmail.com/public_html/dev
+            cd /home/ahmada15te@gmail.com/public_html/dev
             git pull origin main
