@@ -21,11 +21,11 @@ jobs:
           key: ${{ secrets.SITEGROUND_SSH_KEY }}
           port: 18765
           script: |
-            cd ~/public_html
+            cd ~/public_html/wp-content/themes
 
             # If the folder doesn't exist, clone it
             if [ ! -d "dev/.git" ]; then
-              git clone git@github.com:USERNAME/REPO.git dev
+              git clone git@github.com:capstone-1252/bee-inc.git dev
             else
               cd dev
               git pull origin main
