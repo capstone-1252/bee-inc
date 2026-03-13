@@ -208,6 +208,45 @@ function cf7_protect_email_field($result, $tag)
 	return $result;
 }
 
+// ------------------------------------------------------------
+// ACF Control for Top Level Sales Banner
+
+// $banner_enabled = get_field( 'turn_on_top_banner_sales_section', $post_id );
+// $banner_text    = get_field( 'top_sales_banner_text', $post_id );
+
+// add_shortcode('top_sales_banner', 'top_sales_banner_shortcode');
+
+// function my_theme_register_blocks() {
+//     register_block_type( get_template_directory() . '/block.json' );
+// }
+
+// add_action( 'init', 'my_theme_register_blocks' );
+
+// function sales_banner_shortcode() {
+//     return '<div style="background: red; color: white; padding: 20px; text-align: center;"> THIS SHORTCODE WORKS </div>';
+// }
+
+// add_shortcode( 'sales_banner', 'sales_banner_shortcode' );
+
+// AI Reference.
+// The Advanced Custom Field option for the sales banner at the top, in the <header>:
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!! THIS CODE IS IN PROGRESS & STILL NEEDS SECRUITY CHECKS!
+function sales_banner_shortcode() {
+    $banner_enabled = get_field('turn_on_top_banner_sales_section' );
+    $banner_text = get_field('top_sales_banner_text' );
+    
+    if (!$banner_enabled || !$banner_text ) {
+        return "";
+    }
+    
+    return '
+	<p>' . wp_kses_post(esc_html(htmlspecialchars($banner_text)) ) . '</p>
+	';
+}
+
+add_shortcode('sales_banner', 'sales_banner_shortcode');
+// ------------------------------------------------------------
+
 add_action('wp_head', function() {
     if (is_page() || is_single()) {
         echo '<meta name="description" content="' . get_the_excerpt() . '">';
@@ -217,6 +256,7 @@ add_action('wp_head', function() {
 add_action('wp_head', function() {
     echo '<meta property="og:title" content="' . get_the_title() . '">';
 });
+
 
 add_action('wp_head', function() {
 ?>
