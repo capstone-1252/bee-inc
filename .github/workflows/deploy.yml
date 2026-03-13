@@ -23,10 +23,9 @@ jobs:
           script: |
             cd ~/public_html/wp-content/themes
 
-            # If the folder doesn't exist, clone it
-            if [ ! -d "dev/.git" ]; then
-              git clone git@github.com:capstone-1252/bee-inc.git dev
+            if [ ! -d "ellura-theme/.git" ]; then
+              git clone https://github.com/capstone-1252/bee-inc.git ellura-theme
             else
-              cd dev
+              cd ellura-theme
               git pull origin main
             fi
