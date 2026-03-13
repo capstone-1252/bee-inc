@@ -11,6 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Test SSH Connection (Debug)
+        env:
+          SSH_KEY: ${{ secrets.SITEGROUND_SSH_KEY }}
+          SSH_PASSPHRASE: ${{ secrets.SSH_PASSPHRASE }}
+          SSH_HOST: ${{ secrets.SITEGROUND_HOST }}
+          SSH_USER: ${{ secrets.SITEGROUND_USER }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh -vvvv -i ~/.ssh/id_rsa -p 18765 $SSH_USER@$SSH_HOST "echo 'Connection successful'"
+      
       - name: Deploy to Siteground
         uses: appleboy/ssh-action@master
         with:
@@ -20,5 +32,5 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           port: 18765
           script: |
-            cd /home/username/public_html/dev
+            cd /home/sfolard@gmail.com/public_html/dev
             git pull origin main
