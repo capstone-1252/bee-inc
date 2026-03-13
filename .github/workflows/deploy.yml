@@ -19,15 +19,14 @@ jobs:
           host: ${{ secrets.SITEGROUND_HOST }}
           username: ${{ secrets.SITEGROUND_USER }}
           key: ${{ secrets.SITEGROUND_SSH_KEY }}
-          passphrase: ${{ secrets.SITEGROUND_PASSPHRASE }}
           port: 18765
           script: |
-            cd public_html
+            cd ~/public_html
+
             # If the folder doesn't exist, clone it
             if [ ! -d "dev/.git" ]; then
               git clone git@github.com:USERNAME/REPO.git dev
             else
-              # If it exists, go inside and pull updates
               cd dev
               git pull origin main
             fi
