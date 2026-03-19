@@ -1,4 +1,4 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header", "tagName":"header","className":"site-header"} /-->
 
 <!-- wp:post-terms {"term":"product_cat","textAlign":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"fontSize":"medium"} /-->
 
@@ -11,21 +11,27 @@
 <p>Explore our essential collection designed to bring wellbeing, serenity and comfort to your home. We offer a variety of different prayer mats in different colours. Our prayer mats are also designed to be portable and suited for travel.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:query {"queryId":35,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":true},"metadata":{"categories":["posts"],"patternName":"core/query-grid-posts","name":"Grid"}} -->
-<div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"12rem"}} -->
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true,"height":"%"} -->
-<!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
+<!-- wp:woocommerce/product-collection {"queryId":32,"query":{"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":true,"taxQuery":{},"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"featured":false,"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill","fixedWidth":""},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."},"align":"wide"} -->
+<div class="wp-block-woocommerce-product-collection alignwide"><!-- wp:woocommerce/product-template -->
+<!-- wp:woocommerce/product-image {"showSaleBadge":false,"isDescendentOfQueryLoop":true,"aspectRatio":"3/5"} -->
+<!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right"} /-->
 <!-- /wp:woocommerce/product-image -->
 
-<!-- wp:post-title {"isLink":true,"fontSize":"medium"} /-->
+<!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"typography":{"lineHeight":"1.4"}},"fontSize":"medium","__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
 
-<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true} /-->
+<!-- wp:woocommerce/product-rating {"isDescendentOfQueryLoop":true,"textAlign":"center"} /-->
 
-<!-- wp:woocommerce/product-button {"width":75,"isDescendentOfQueryLoop":true} /--></div>
+<!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"center","fontSize":"small"} /-->
+
+<!-- wp:woocommerce/product-button {"width":75,"isDescendentOfQueryLoop":true} /-->
+<!-- /wp:woocommerce/product-template --></div>
+<!-- /wp:woocommerce/product-collection --></div>
 <!-- /wp:group -->
-<!-- /wp:post-template --></div>
-<!-- /wp:query --></div>
+
+<!-- wp:template-part {"slug":"footer","theme":"bee-inc","tagName":"footer","className":"site-footer"} /-->
+
+<!-- wp:group {"metadata":{"categories":["woo-commerce"],"patternName":"woocommerce-blocks/product-collection-3-columns","name":"Product Collection 3 Columns"},"align":"wide","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"margin":{"top":"0px","bottom":"80px"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide" style="margin-top:0px;margin-bottom:80px;padding-top:0;padding-right:var(--wp--preset--spacing--30);padding-bottom:0;padding-left:var(--wp--preset--spacing--30)"></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer", "tagName":"footer","className":"site-footer"} /-->
