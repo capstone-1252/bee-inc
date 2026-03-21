@@ -36,3 +36,8 @@ body {
 	height: 3rem;
 	display: block;
 }
+
+.sales--banner {
+	background-color: #D2B391;
+	font-weight: 500;
+}

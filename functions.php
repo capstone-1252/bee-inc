@@ -230,3 +230,16 @@ add_action('wp_head', function () {
 	</script>
 <?php
 });
+
+// ---------------------------------------------------------------
+// SIERRA BRAVO
+add_action('wp_body_open', function() {
+    $settings_page_id = 84; 
+
+    $enabled = get_field( 'turn_on_top_banner_sales_section', $settings_page_id );
+    $text    = get_field( 'top_sales_banner_text', $settings_page_id );
+
+    if (!$enabled || !$text ) return;
+
+    echo '<div class="sales--banner"><p>' . esc_html( $text ) . '</p></div>';
+});
