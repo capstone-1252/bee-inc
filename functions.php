@@ -234,7 +234,9 @@ add_action('wp_head', function () {
 // ---------------------------------------------------------------
 // SIERRA BRAVO
 add_action('wp_body_open', function() {
-    $settings_page_id = 84; 
+
+	// NOTE #DEV1, for ID 75.
+    $settings_page_id = 64; 
 
     $enabled = get_field( 'turn_on_top_banner_sales_section', $settings_page_id );
     $text    = get_field( 'top_sales_banner_text', $settings_page_id );
