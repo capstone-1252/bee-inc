@@ -19,6 +19,12 @@ html {
 	scroll-behavior: smooth;
 }
 
+:root {
+	--dark-grey: #242424;
+	--beige: #D2B391;
+	--warmer-beige: #C39A6D;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
 
 	html {
@@ -40,4 +46,13 @@ body {
 .sales--banner {
 	background-color: #D2B391;
 	font-weight: 500;
+}
+
+.site-footer {
+	background-color: var(--dark-grey);
+	color: white;
+}
+
+.wp-social-link {
+	color: white!important;
 }
