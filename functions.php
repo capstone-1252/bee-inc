@@ -233,15 +233,58 @@ add_action('wp_head', function () {
 
 // ---------------------------------------------------------------
 // SIERRA BRAVO
-add_action('wp_body_open', function() {
+add_action('wp_body_open', function () {
 
 	// NOTE #DEV1, for ID 75.
-    $settings_page_id = 64; 
+	$settings_page_id = 64;
 
-    $enabled = get_field( 'turn_on_top_banner_sales_section', $settings_page_id );
-    $text    = get_field( 'top_sales_banner_text', $settings_page_id );
+	$enabled = get_field('turn_on_top_banner_sales_section', $settings_page_id);
+	$text    = get_field('top_sales_banner_text', $settings_page_id);
 
-    if (!$enabled || !$text ) return;
+	if (!$enabled || !$text) return;
 
-    echo '<div class="sales--banner"><p>' . esc_html( $text ) . '</p></div>';
+	echo '<div class="sales--banner"><p>' . esc_html($text) . '</p></div>';
 });
+
+add_filter('render_block', function ($block_content, $block) {
+	if (empty($block['blockName']) || 'woocommerce/product-collection' !== $block['blockName']) {
+		return $block_content;
+	}
+
+	if (empty($block['attrs']['query']['taxQuery']['product_tag'])) {
+		return $block_content;
+	}
+
+	$product_tag_ids = $block['attrs']['query']['taxQuery']['product_tag'];
+
+	if (empty($product_tag_ids) || ! is_array($product_tag_ids)) {
+		return $block_content;
+	}
+
+	$tag_id = absint($product_tag_ids[0]);
+
+	if (! $tag_id) {
+		return $block_content;
+	}
+
+	$tag = get_term($tag_id, 'product_tag');
+
+	if (! $tag || is_wp_error($tag)) {
+		return $block_content;
+	}
+
+	// Build output
+	$output  = '<div class="wp-block-group collection-tag-description" style="text-align:center;">';
+
+	// Tag name
+	$output .= '<h2 class="wp-block-heading has-text-align-center collection-tag-title" style="margin-bottom:1rem; font-size:18px;">' . esc_html($tag->name) . '</h2>';
+
+	// Tag description (if exists)
+	if (! empty($tag->description)) {
+		$output .= wp_kses_post(wpautop($tag->description));
+	}
+
+	$output .= '</div>';
+
+	return $output . $block_content;
+}, 10, 2);
