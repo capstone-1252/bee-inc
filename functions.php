@@ -233,6 +233,10 @@ add_action('wp_head', function () {
 
 // ---------------------------------------------------------------
 // SIERRA BRAVO
+add_filter('acf/update_value/name=top_sales_banner_text', function ($input) {
+    return sanitize_text_field($input);
+}, 10, 1);
+
 add_action('wp_body_open', function () {
 
 	// NOTE #DEV1, for ID 75.
@@ -243,7 +247,13 @@ add_action('wp_body_open', function () {
 
 	if (!$enabled || !$text) return;
 
-	echo '<div class="sales--banner"><p>' . esc_html($text) . '</p></div>';
+	echo '<div class="sales--banner">
+        <div class="sales--banner-track">
+            <p>' . esc_html($text) . '</p>
+            <p>' . esc_html($text) . '</p>
+            <p>' . esc_html($text) . '</p>
+        </div>
+      </div>';
 });
 
 add_filter('render_block', function ($block_content, $block) {

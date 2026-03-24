@@ -44,9 +44,33 @@ body {
 }
 
 .sales--banner {
-	background-color: #D2B391;
+	background-color: var(--beige);
 	font-weight: 500;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	white-space: nowrap;
+	overflow: hidden;
 }
+
+.sales--banner p {
+	margin: 0 !important;
+	padding: 0.5rem 1rem;
+}
+
+.sales--banner-track {
+	animation: scrolling-sales-banner 20s linear infinite;
+}
+
+@keyframes scrolling-sales-banner {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-50%);
+	}
+}
+
 
 .site-footer {
 	background-color: var(--dark-grey);
@@ -54,5 +78,5 @@ body {
 }
 
 .wp-social-link {
-	color: white!important;
+	color: white !important;
 }
