@@ -73,9 +73,18 @@ div.sales--banner-track.top-level-sales-banner {
 	}
 }
 
+.site-header, .site-header a, .site-header li, .site-header svg {
+	background-color: var(--dark-grey);
+	color: white;
+	text-decoration: none;
+}
 
 .site-footer {
 	background-color: var(--dark-grey);
+	color: white;
+}
+
+.site-footer h1 {
 	color: white;
 }
 
