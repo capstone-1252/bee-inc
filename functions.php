@@ -248,7 +248,7 @@ add_action('wp_body_open', function () {
 	if (!$enabled || !$text) return;
 
 	echo '<div class="sales--banner">
-        <div class="sales--banner-track">
+        <div class="sales--banner-track top-level-sales-banner">
             <p>' . esc_html($text) . '</p>
             <p>' . esc_html($text) . '</p>
             <p>' . esc_html($text) . '</p>
