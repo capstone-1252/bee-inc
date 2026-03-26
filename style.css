@@ -126,3 +126,83 @@ div.sales--banner-track.top-level-sales-banner {
 .wc-block-product-template li .wp-block-post-title {
     margin-top: 12px;
 }
+
+div.wp-site-blocks {
+	padding-top: 0!important;
+	padding-bottom: 0!important;
+}
+
+div.wp-block-buttons a.wp-block-button__link {
+	border-radius: 1rem;
+	font-weight: 500;
+}
+
+.cta--primary {
+	background-color: var(--dark-grey);
+	color: white;
+}
+
+.cta--beige {
+	background-color: var(--beige);
+}
+
+.collection-card {
+	border-radius: 1rem;
+	background-color: var(--dark-grey);
+	color: white;
+}
+
+.collection-card__content {
+	padding: 1rem;
+	padding-bottom: 2.25rem;
+}
+
+.collection-card__content div.wp-block-buttons {
+	margin: auto;
+}
+
+.collection-card__womens-image {
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+.collection-card__mens-image,
+.collection-card__childrens-image {
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+@media (width > 62.5rem) {
+	
+	.collection-card__content div.wp-block-buttons {
+		margin: unset;
+	}
+	
+	.collection-card__content div.wp-block-buttons a.wp-block-button__link {
+		border-top-left-radius: 0!important;
+		border-bottom-right-radius: 0!important;
+		/* POSITIONING REQUIRED HERE */
+	}
+
+	.collection-card__womens-image {
+		border-top-left-radius: 1rem;
+		border-top-right-radius: unset;
+		border-bottom-left-radius: 1rem;
+	}
+}
+
+/* git stash push -m */
+
+/* collection-card for the home page collection cards (womens, etc) */
+/* collection-card__content is for the content inside those. */
+/* cta--top-right for home page childrens/mens/womens */
+
+/* wp-block-button__link has-text-align-center wp-element-button */
+
+/* wp-block-button__link wp-element-button */
+
+
+
+/* footer-container on the content container (excluding social media links)  */
+/* footer-nav on the footer <ul> holding the nav links */
+
