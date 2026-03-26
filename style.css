@@ -97,10 +97,32 @@ div.sales--banner-track.top-level-sales-banner {
 }
 
 
-/* Target EACH product card only */
+/* Product card */
 .wc-block-product-template li {
     background: var(--dark-grey);
-	color: white;
-    padding: 15px;
-    border-radius: 8px;
+    border-radius: 10px;
+    overflow: hidden; /* IMPORTANT: clips image to rounded corners */
+    padding: 0; /* remove global padding */
+}
+
+/* Image wrapper */
+.wc-block-product-template li .wc-block-components-product-image {
+    margin: 0;
+}
+
+/* Image full width */
+.wc-block-product-template li img {
+    width: 100%;
+    display: block;
+}
+
+/* Remove spacing around image wrappers */
+.wc-block-product-template li figure {
+    margin: 0;
+    padding: 0;
+}
+
+/* Space below image */
+.wc-block-product-template li .wp-block-post-title {
+    margin-top: 12px;
 }
