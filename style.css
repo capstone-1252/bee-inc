@@ -89,3 +89,18 @@ div.sales--banner-track.top-level-sales-banner {
 .wp-social-link {
 	color: white !important;
 }
+
+/*  backgrounds */
+
+.wp-block-group.alignwide.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+	background-color: var(--beige);
+}
+
+
+/* Target EACH product card only */
+.wc-block-product-template li {
+    background: var(--dark-grey);
+	color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
