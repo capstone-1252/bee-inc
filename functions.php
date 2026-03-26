@@ -51,19 +51,36 @@ add_action('after_setup_theme', 'ellura_collections_setup');
  *
  * @return void
  */
+// function ellura_collections_styles()
+// {
+// 	wp_enqueue_style(
+// 		'ellura-collections-style',
+// 		get_stylesheet_uri(),
+// 		[],
+// 		ELLURA_COLLECTIONS_VERSION
+// 	);
+// 	wp_enqueue_style(
+// 		'ellura-collections-shared-styles',
+// 		get_theme_file_uri('assets/css/style-shared.min.css'),
+// 		[],
+// 		ELLURA_COLLECTIONS_VERSION
+// 	);
+// }
+
+// Styles:
 function ellura_collections_styles()
 {
 	wp_enqueue_style(
 		'ellura-collections-style',
 		get_stylesheet_uri(),
 		[],
-		ELLURA_COLLECTIONS_VERSION
+		filemtime(get_stylesheet_directory() . '/style.css')
 	);
 	wp_enqueue_style(
 		'ellura-collections-shared-styles',
 		get_theme_file_uri('assets/css/style-shared.min.css'),
 		[],
-		ELLURA_COLLECTIONS_VERSION
+		filemtime(get_theme_file_path('assets/css/style-shared.min.css'))
 	);
 }
 add_action('wp_enqueue_scripts', 'ellura_collections_styles');

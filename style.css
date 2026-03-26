@@ -46,8 +46,6 @@ body {
 .sales--banner {
 	background-color: var(--beige);
 	font-weight: 500;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
 	overflow: hidden;
 }
 
