@@ -248,70 +248,125 @@ add_action('wp_head', function () {
 <?php
 });
 
-// ---------------------------------------------------------------
-// SIERRA BRAVO
-add_filter('acf/update_value/name=top_sales_banner_text', function ($input) {
-    return sanitize_text_field($input);
-}, 10, 1);
-
-add_action('wp_body_open', function () {
-
-	// NOTE #DEV1, for ID 75.
-	$settings_page_id = 64;
-
-	$enabled = get_field('turn_on_top_banner_sales_section', $settings_page_id);
-	$text    = get_field('top_sales_banner_text', $settings_page_id);
-
-	if (!$enabled || !$text) return;
-
-	echo '<div class="sales--banner">
-        <div class="sales--banner-track top-level-sales-banner">
-            <p>' . esc_html($text) . '</p>
-            <p>' . esc_html($text) . '</p>
-            <p>' . esc_html($text) . '</p>
-        </div>
-      </div>';
-});
-
-add_filter('render_block', function ($block_content, $block) {
-	if (empty($block['blockName']) || 'woocommerce/product-collection' !== $block['blockName']) {
-		return $block_content;
+/**
+ * Shortcode: [products_by_tags_in_category category="womans-clothes"]
+ *
+ * Shows products from one WooCommerce product category,
+ * grouped by product tag.
+ */
+function dr_products_by_tags_in_category_shortcode($atts)
+{
+	if (! class_exists('WooCommerce')) {
+		return '<p>WooCommerce is not active.</p>';
 	}
 
-	if (empty($block['attrs']['query']['taxQuery']['product_tag'])) {
-		return $block_content;
+	$atts = shortcode_atts(
+		array(
+			'category'           => '',     // product category slug
+			'orderby_tags'       => 'name', // tag sorting: name, slug, id, count
+			'order_tags'         => 'ASC',  // ASC or DESC
+			'orderby_products'   => 'title', // product sorting inside each tag
+			'order_products'     => 'ASC',  // ASC or DESC
+			'hide_empty_tags'    => 'true', // true or false
+		),
+		$atts,
+		'products_by_tags_in_category'
+	);
+
+	$category_slug = sanitize_title($atts['category']);
+
+	if (empty($category_slug)) {
+		return '<p>Please provide a product category slug.</p>';
 	}
 
-	$product_tag_ids = $block['attrs']['query']['taxQuery']['product_tag'];
+	$hide_empty_tags = filter_var($atts['hide_empty_tags'], FILTER_VALIDATE_BOOLEAN);
 
-	if (empty($product_tag_ids) || ! is_array($product_tag_ids)) {
-		return $block_content;
+	// Step 1: Get product IDs in this category
+	$product_ids = get_posts(array(
+		'post_type'      => 'product',
+		'post_status'    => 'publish',
+		'fields'         => 'ids',
+		'posts_per_page' => -1,
+		'tax_query'      => array(
+			array(
+				'taxonomy' => 'product_cat',
+				'field'    => 'slug',
+				'terms'    => $category_slug,
+			),
+		),
+	));
+
+	if (empty($product_ids)) {
+		return '<p>No products found in this category.</p>';
 	}
 
-	$tag_id = absint($product_tag_ids[0]);
+	// Step 2: Get product tags actually used by those products
+	$tags = wp_get_object_terms(
+		$product_ids,
+		'product_tag',
+		array(
+			'orderby'    => $atts['orderby_tags'],
+			'order'      => $atts['order_tags'],
+			'hide_empty' => $hide_empty_tags,
+		)
+	);
 
-	if (! $tag_id) {
-		return $block_content;
+	if (is_wp_error($tags) || empty($tags)) {
+		return '<p>No product tags found for this category.</p>';
 	}
 
-	$tag = get_term($tag_id, 'product_tag');
+	// Remove duplicates just in case
+	$unique_tags = array();
+	foreach ($tags as $tag) {
+		$unique_tags[$tag->term_id] = $tag;
+	}
+	$tags = array_values($unique_tags);
 
-	if (! $tag || is_wp_error($tag)) {
-		return $block_content;
+	ob_start();
+
+	echo '<div class="products-by-tags-in-category">';
+
+	foreach ($tags as $tag) {
+		$product_query = new WP_Query(array(
+			'post_type'      => 'product',
+			'post_status'    => 'publish',
+			'posts_per_page' => -1,
+			'orderby'        => $atts['orderby_products'],
+			'order'          => $atts['order_products'],
+			'tax_query'      => array(
+				'relation' => 'AND',
+				array(
+					'taxonomy' => 'product_cat',
+					'field'    => 'slug',
+					'terms'    => $category_slug,
+				),
+				array(
+					'taxonomy' => 'product_tag',
+					'field'    => 'term_id',
+					'terms'    => $tag->term_id,
+				),
+			),
+		));
+
+		if ($product_query->have_posts()) {
+			echo '<section class="product-tag-group">';
+			echo '<h2 class="product-tag-title">' . esc_html($tag->name) . '</h2>';
+			echo '<ul class="products columns-4">';
+
+			while ($product_query->have_posts()) {
+				$product_query->the_post();
+				wc_get_template_part('content', 'product');
+			}
+
+			echo '</ul>';
+			echo '</section>';
+		}
+
+		wp_reset_postdata();
 	}
 
-	// Build output
-	$output  = '<div class="wp-block-group collection-tag-description" style="text-align:center;">';
+	echo '</div>';
 
-	// Tag name
-	$output .= '<h2 class="wp-block-heading has-text-align-center collection-tag-title" style="margin-bottom:1rem; font-size:18px;">' . esc_html($tag->name) . '</h2>';
-
-	// Tag description (if exists)
-	if (! empty($tag->description)) {
-		$output .= wp_kses_post(wpautop($tag->description));
-	}
-
-	$output .= '</div>';
-
-	return $output . $block_content;
-}, 10, 2);
+	return ob_get_clean();
+}
+add_shortcode('products_by_tags_in_category', 'dr_products_by_tags_in_category_shortcode');
