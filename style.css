@@ -206,3 +206,4 @@ div.wp-block-buttons a.wp-block-button__link {
 /* footer-container on the content container (excluding social media links)  */
 /* footer-nav on the footer <ul> holding the nav links */
 
+.wp-block-search__button { padding-inline: 0px;}
