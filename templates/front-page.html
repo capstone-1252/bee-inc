@@ -1,4 +1,4 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"elluracollection","tagName":"header","className":"site-header"} /-->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:columns {"verticalAlignment":"center"} -->
@@ -18,8 +18,8 @@
     <!-- /wp:paragraph -->
     
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-    <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center"} -->
-    <div class="wp-block-button"><a class="wp-block-button__link has-text-align-center wp-element-button">Shop Women’s Collection</a></div>
+    <div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","className":"cta\u002d\u002dprimary"} -->
+    <div class="wp-block-button cta--primary"><a class="wp-block-button__link has-text-align-center wp-element-button">Shop Women’s Collection</a></div>
     <!-- /wp:button --></div>
     <!-- /wp:buttons --></div>
     <!-- /wp:column --></div>
@@ -27,23 +27,29 @@
     <!-- /wp:group -->
     
     <!-- wp:group {"metadata":{"name":"collection"},"style":{"spacing":{"blockGap":"var:preset|spacing|70","margin":{"top":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"default"}} -->
-    <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"large"} -->
+    <div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70)"><!-- wp:group {"tagName":"section","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained","wideSize":"63.75rem"}} -->
+    <section class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"large"} -->
     <h2 class="wp-block-heading has-text-align-center has-large-font-size"><strong>DISCOVER OUR LARGE COLLECTION</strong></h2>
     <!-- /wp:heading -->
     
-    <!-- wp:paragraph {"align":"center","fontSize":"extra-small"} -->
-    <p class="has-text-align-center has-extra-small-font-size">Ellura’s curated collection offers modest clothing and accessories for women and children, as well as elegant thobes for men. As part of our collection, we also offer sajada’s (prayer mats). Our entire collection has been thoughtfully curated, and sells across all of Canada.</p>
-    <!-- /wp:paragraph --></div>
+    <!-- wp:paragraph {"align":"left","fontSize":"extra-small"} -->
+    <p class="has-text-align-left has-extra-small-font-size">Ellura’s curated collection offers modest clothing and accessories for women and children, as well as elegant thobes for men. As part of our collection, we also offer sajada’s (prayer mats). Our entire collection has been thoughtfully curated, and sells across all of Canada.</p>
+    <!-- /wp:paragraph --></section>
     <!-- /wp:group -->
     
-    <!-- wp:group {"metadata":{"name":"Children's"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":{"topLeft":"16px","topRight":"16px","bottomLeft":"16px","bottomRight":"16px"}}},"backgroundColor":"cyan-bluish-gray","layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
-    <div class="wp-block-group has-cyan-bluish-gray-background-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"id":9,"sizeSlug":"medium","linkDestination":"none"} -->
-    <figure class="wp-block-image size-medium"><img src="http://capstone.local/wp-content/uploads/woocommerce-placeholder-300x300.webp" alt="" class="wp-image-9"/></figure>
-    <!-- /wp:image -->
+    <!-- wp:group {"tagName":"section","metadata":{"name":"Children's"},"className":"collection-card","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"radius":{"topLeft":"16px","topRight":"16px","bottomLeft":"16px","bottomRight":"16px"}}},"backgroundColor":"cyan-bluish-gray","layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
+    <section class="wp-block-group collection-card has-cyan-bluish-gray-background-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:columns -->
+    <div class="wp-block-columns"><!-- wp:column -->
+    <div class="wp-block-column"><!-- wp:group {"layout":{"type":"constrained","contentSize":""}} -->
+    <div class="wp-block-group"><!-- wp:image {"id":259,"sizeSlug":"large","linkDestination":"none","className":"collection-card__womens-image"} -->
+    <figure class="wp-block-image size-large collection-card__womens-image"><img src="https://dev.elluracollection.com/wp-content/uploads/2026/03/womens-banner-desktop-1-878x1024.avif" alt="" class="wp-image-259"/></figure>
+    <!-- /wp:image --></div>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
     
-    <!-- wp:group {"layout":{"type":"constrained","contentSize":"350px"}} -->
-    <div class="wp-block-group"><!-- wp:heading {"level":3} -->
+    <!-- wp:column -->
+    <div class="wp-block-column"><!-- wp:group {"className":"collection-card__content","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group collection-card__content"><!-- wp:heading {"level":3} -->
     <h3 class="wp-block-heading">WOMEN'S</h3>
     <!-- /wp:heading -->
     
@@ -52,20 +58,28 @@
     <!-- /wp:paragraph -->
     
     <!-- wp:buttons -->
-    <div class="wp-block-buttons"><!-- wp:button -->
-    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Explore Women's</a></div>
+    <div class="wp-block-buttons"><!-- wp:button {"className":"cta\u002d\u002dbeige cta\u002d\u002dtop-right"} -->
+    <div class="wp-block-button cta--beige cta--top-right"><a class="wp-block-button__link wp-element-button">Explore Women's</a></div>
     <!-- /wp:button --></div>
     <!-- /wp:buttons --></div>
     <!-- /wp:group --></div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns --></section>
     <!-- /wp:group -->
     
-    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","orientation":"horizontal","justifyContent":"space-between","verticalAlignment":"stretch"}} -->
-    <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"men's"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":{"topLeft":"16px","topRight":"16px","bottomLeft":"16px","bottomRight":"16px"}}},"backgroundColor":"cyan-bluish-gray","layout":{"type":"constrained","contentSize":"250px"}} -->
-    <div class="wp-block-group has-cyan-bluish-gray-background-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"id":9,"sizeSlug":"medium","linkDestination":"none","align":"center"} -->
-    <figure class="wp-block-image aligncenter size-medium"><img src="http://capstone.local/wp-content/uploads/woocommerce-placeholder-300x300.webp" alt="" class="wp-image-9"/></figure>
-    <!-- /wp:image -->
+    <!-- wp:group {"layout":{"type":"constrained","wideSize":"63.75rem"}} -->
+    <div class="wp-block-group"><!-- wp:columns -->
+    <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"0"}}} -->
+    <div class="wp-block-column"><!-- wp:group {"tagName":"section","metadata":{"name":"men's"},"className":"card-collection","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"radius":{"topLeft":"16px","topRight":"16px","bottomLeft":"16px","bottomRight":"16px"}}},"backgroundColor":"cyan-bluish-gray","layout":{"type":"constrained","contentSize":"45%"}} -->
+    <section class="wp-block-group card-collection has-cyan-bluish-gray-background-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"}} -->
+    <div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:group {"layout":{"type":"constrained","wideSize":"100%"}} -->
+    <div class="wp-block-group"><!-- wp:image {"id":258,"sizeSlug":"full","linkDestination":"none","align":"full","className":"collection-card__mens-image","style":{"spacing":{"margin":{"right":"0","left":"0","top":"0","bottom":"0"}}}} -->
+    <figure class="wp-block-image alignfull size-full collection-card__mens-image" style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0"><img src="https://dev.elluracollection.com/wp-content/uploads/2026/03/mens-banner-desktop.avif" alt="" class="wp-image-258"/></figure>
+    <!-- /wp:image --></div>
+    <!-- /wp:group -->
     
-    <!-- wp:heading {"textAlign":"center","level":3} -->
+    <!-- wp:group {"className":"collection-card__content","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group collection-card__content"><!-- wp:heading {"textAlign":"center","level":3} -->
     <h3 class="wp-block-heading has-text-align-center">MEN'S</h3>
     <!-- /wp:heading -->
     
@@ -74,15 +88,24 @@
     <!-- /wp:paragraph -->
     
     <!-- wp:buttons {"layout":{"type":"flex","verticalAlignment":"top"}} -->
-    <div class="wp-block-buttons"><!-- wp:button -->
-    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Explore Men's</a></div>
+    <div class="wp-block-buttons"><!-- wp:button {"className":"cta\u002d\u002dbeige cta\u002d\u002dtop-right"} -->
+    <div class="wp-block-button cta--beige cta--top-right"><a class="wp-block-button__link wp-element-button">Explore Men's</a></div>
     <!-- /wp:button --></div>
     <!-- /wp:buttons --></div>
-    <!-- /wp:group -->
+    <!-- /wp:group --></div>
+    <!-- /wp:group --></section>
+    <!-- /wp:group --></div>
+    <!-- /wp:column -->
     
-    <!-- wp:group {"metadata":{"name":"women's"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}},"border":{"radius":{"topLeft":"16px","topRight":"16px","bottomLeft":"16px","bottomRight":"16px"}}},"backgroundColor":"cyan-bluish-gray","layout":{"type":"constrained","contentSize":"250px"}} -->
-    <div class="wp-block-group has-cyan-bluish-gray-background-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"id":9,"sizeSlug":"medium","linkDestination":"none","align":"center"} -->
-    <figure class="wp-block-image aligncenter size-medium"><img src="http://capstone.local/wp-content/uploads/woocommerce-placeholder-300x300.webp" alt="" class="wp-image-9"/></figure>
+    <!-- wp:column -->
+    <div class="wp-block-column"><!-- wp:group {"tagName":"section","metadata":{"name":"women's"},"className":"collection-card","style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}},"border":{"radius":{"topLeft":"16px","topRight":"16px","bottomLeft":"16px","bottomRight":"16px"}}},"backgroundColor":"cyan-bluish-gray","layout":{"type":"constrained","contentSize":"45%","wideSize":""}} -->
+    <section class="wp-block-group collection-card has-cyan-bluish-gray-background-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;border-bottom-left-radius:16px;border-bottom-right-radius:16px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"id":9,"sizeSlug":"medium","linkDestination":"none","align":"center","className":"collection-card__childrens-image"} -->
+    <figure class="wp-block-image aligncenter size-medium collection-card__childrens-image"><img src="http://capstone.local/wp-content/uploads/woocommerce-placeholder-300x300.webp" alt="" class="wp-image-9"/></figure>
+    <!-- /wp:image -->
+    
+    <!-- wp:group {"className":"collection-card__content","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group collection-card__content"><!-- wp:image -->
+    <figure class="wp-block-image"><img alt=""/></figure>
     <!-- /wp:image -->
     
     <!-- wp:heading {"textAlign":"center","level":3} -->
@@ -94,11 +117,14 @@
     <!-- /wp:paragraph -->
     
     <!-- wp:buttons -->
-    <div class="wp-block-buttons"><!-- wp:button -->
-    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Explore Children's</a></div>
+    <div class="wp-block-buttons"><!-- wp:button {"className":"cta\u002d\u002dbeige cta\u002d\u002dtop-right"} -->
+    <div class="wp-block-button cta--beige cta--top-right"><a class="wp-block-button__link wp-element-button">Explore Children's</a></div>
     <!-- /wp:button --></div>
     <!-- /wp:buttons --></div>
+    <!-- /wp:group --></section>
     <!-- /wp:group --></div>
+    <!-- /wp:column --></div>
+    <!-- /wp:columns --></div>
     <!-- /wp:group -->
     
     <!-- wp:group {"metadata":{"name":"essentials"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
@@ -123,8 +149,8 @@
     <!-- /wp:paragraph -->
     
     <!-- wp:buttons -->
-    <div class="wp-block-buttons"><!-- wp:button -->
-    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Explore Essentials</a></div>
+    <div class="wp-block-buttons"><!-- wp:button {"className":"cta\u002d\u002dbeige"} -->
+    <div class="wp-block-button cta--beige"><a class="wp-block-button__link wp-element-button">Explore Essentials</a></div>
     <!-- /wp:button --></div>
     <!-- /wp:buttons --></div>
     <!-- /wp:group --></div>
@@ -137,7 +163,7 @@
     <h2 class="wp-block-heading has-large-font-size">NEWEST PRODUCTS</h2>
     <!-- /wp:heading -->
     
-    <!-- wp:woocommerce/product-collection {"queryId":10,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_tag":[35]},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":2,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/by-tag","hideControls":["inherit","hand-picked","filterable"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
+    <!-- wp:woocommerce/product-collection {"queryId":27,"query":{"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_tag":[35]},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":5,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/by-tag","hideControls":["inherit","hand-picked","filterable"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
     <div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template -->
     <!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true} -->
     <!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
@@ -157,7 +183,7 @@
     <h2 class="wp-block-heading has-large-font-size">BEST SELLERS</h2>
     <!-- /wp:heading -->
     
-    <!-- wp:woocommerce/product-collection {"queryId":11,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_tag":[34]},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":2,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/by-tag","hideControls":["inherit","hand-picked","filterable"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
+    <!-- wp:woocommerce/product-collection {"queryId":28,"query":{"perPage":4,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_tag":[34]},"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":2,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/by-tag","hideControls":["inherit","hand-picked","filterable"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."}} -->
     <div class="wp-block-woocommerce-product-collection"><!-- wp:woocommerce/product-template -->
     <!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true} -->
     <!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
@@ -194,4 +220,4 @@
     <!-- /wp:group --></div>
     <!-- /wp:group -->
     
-     <!-- wp:template-part {"slug":"footer", "tagName":"footer","className":"site-footer"} /-->
+    <!-- wp:template-part {"slug":"footer","theme":"elluracollection","tagName":"footer","className":"site-footer"} /-->
