@@ -370,3 +370,28 @@ function dr_products_by_tags_in_category_shortcode($atts)
 	return ob_get_clean();
 }
 add_shortcode('products_by_tags_in_category', 'dr_products_by_tags_in_category_shortcode');
+
+// ---------------------------------------------------------------
+// SIERRA BRAVO
+add_filter('acf/update_value/name=top_sales_banner_text', function ($input) {
+    return sanitize_text_field($input);
+}, 10, 1);
+
+add_action('wp_body_open', function () {
+
+	// NOTE #DEV1, for ID 75.
+	$settings_page_id = 64;
+
+	$enabled = get_field('turn_on_top_banner_sales_section', $settings_page_id);
+	$text    = get_field('top_sales_banner_text', $settings_page_id);
+
+	if (!$enabled || !$text) return;
+
+	echo '<div class="sales--banner">
+        <div class="sales--banner-track top-level-sales-banner">
+            <p>' . esc_html($text) . '</p>
+            <p>' . esc_html($text) . '</p>
+            <p>' . esc_html($text) . '</p>
+        </div>
+      </div>';
+});
