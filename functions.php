@@ -374,7 +374,7 @@ add_shortcode('products_by_tags_in_category', 'dr_products_by_tags_in_category_s
 // ---------------------------------------------------------------
 // SIERRA BRAVO
 add_filter('acf/update_value/name=top_sales_banner_text', function ($input) {
-    return sanitize_text_field($input);
+	return sanitize_text_field($input);
 }, 10, 1);
 
 add_action('wp_body_open', function () {

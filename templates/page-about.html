@@ -1,4 +1,4 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header", "tagName":"header","className":"site-header"} /-->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:post-title {"textAlign":"center","style":{"typography":{"textTransform":"uppercase"}},"fontSize":"medium"} /-->
@@ -31,13 +31,15 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading -->
-<h2 class="wp-block-heading">THE PRINCIPLES WE LIVE BY</h2>
-<!-- /wp:heading -->
+<div class="wp-block-group"><!-- wp:query {"queryId":6,"query":{"perPage":1,"pages":0,"offset":0,"postType":"about-page","order":"asc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"0"}}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:post-title /-->
 
-<!-- wp:paragraph -->
-<p>At Ellura Collection, we strive to offer our customers the best products and shopping experience. We also believe in the importance of staying connected to our customers. Customers are encouraged to let us know of any feedback and ways we can improve.</p>
-<!-- /wp:paragraph --></div>
+<!-- wp:post-content {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -65,17 +67,15 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"section","layout":{"type":"constrained"}} -->
-<section class="wp-block-group"><!-- wp:heading -->
-<h2 class="wp-block-heading">ELEVATING THE EXPERIENCE</h2>
-<!-- /wp:heading -->
+<section class="wp-block-group"><!-- wp:query {"queryId":6,"query":{"perPage":100,"pages":0,"offset":"1","postType":"about-page","order":"asc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"0"}}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:post-title /-->
 
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">At Ellura Collection, we believe in modesty coexisting with comfort and elegance. Our entire collection is thoughtfully curated to reflect a timeless style.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"fontSize":"small"} -->
-<p class="has-small-font-size">Our clothing is designed to be versatile, and is suited for a variety of different occasions. Whether it’s Eid, everyday life or travel, you can stay assured knowing that our clothing perfectly complements your lifestyle with lasting quality and elegance.</p>
-<!-- /wp:paragraph --></section>
+<!-- wp:post-content {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></section>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"elluracollection","tagName":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->

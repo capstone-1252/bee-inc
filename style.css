@@ -105,12 +105,17 @@ div.sales--banner-track.top-level-sales-banner p {
 }
 
 .site-header,
-.site-header a,
-.site-header li,
-.site-header svg {
+.site-header li > .site-header a {
 	background-color: var(--dark-grey);
 	color: white;
 	text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+	.site-header svg {
+		color: white;
+		text-decoration: none;
+	}
 }
 
 .site-footer {
@@ -310,4 +315,8 @@ div.wp-block-buttons a.wp-block-button__link {
 /* footer-container on the content container (excluding social media links)  */
 /* footer-nav on the footer <ul> holding the nav links */
 
-.wp-block-search__button { padding-inline: 0px;}
+.wp-block-search__button {padding-top: 1px;}
+
+.woocommerce ul.products li.product-category {
+    width: 100% !important;
+}
