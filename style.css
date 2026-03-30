@@ -61,6 +61,39 @@ div.sales--banner-track.top-level-sales-banner {
 	white-space: nowrap;
 }
 
+div.sales--banner-track.top-level-sales-banner p {
+	font-weight: bold;
+}
+
+:root :where(.wp-block-separator) {
+	color: unset!important;
+}
+
+.wp-block-separator {
+	border-top: unset!important;
+}
+/* ----- */
+/* 
+.home-hero-inner-container {
+	display: flex;
+}
+
+.hero--img-container {
+	order: 2;
+}
+
+.hero--content-container {
+	order: 1;
+}
+
+@media (min-width: 48.875rem) {
+	.home-hero-inner-container {
+		display: unset!important;
+	}
+} */
+
+
+
 @keyframes scrolling-sales-banner {
 	from {
 		transform: translateX(0);
@@ -190,7 +223,8 @@ div.wp-block-buttons a.wp-block-button__link {
 	background-color: unset !important;
 	border-color: unset !important;
 	border-width: unset !important;
-	padding: unset !important;
+	border-style: unset!important;
+	padding: 0.75rem 1rem!important;
 }
 
 .has-cyan-bluish-gray-background-color {
@@ -205,8 +239,11 @@ div.wp-block-buttons a.wp-block-button__link {
 .divider {
 	background-color: var(--beige) !important;
 	height: 0.25rem!important;
-	margin-top: 3.25rem;
-	margin-bottom: 3.25rem;
+	margin-top: 3.25rem!important;
+	margin-bottom: 3.25rem!important;
+	max-width: 60.375rem!important;
+	padding-left: 1.5rem!important;
+	padding-right: 1.5rem!important;
 }
 
 .hero-triangle-container {
@@ -216,6 +253,29 @@ div.wp-block-buttons a.wp-block-button__link {
 	left: 0;
 	width: 40%;
 	height: 100%;
+}
+
+.essentials-container {
+	background-color: var(--dark-grey);
+	color: white;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 1rem;
+	padding-bottom: 3.28125rem;
+}
+
+.essentials--triangle {
+	width: 100vw!important;
+	height: 14.0625rem!important;
+}
+
+:root :where(a:where(:not(.wp-element-button))) {
+	text-decoration: none!important;
+}
+
+.wp-block-social-links .wp-social-link svg {
+	width: 3rem!important;
+	height: 3rem!important;
 }
 
 @media (width > 62.5rem) {
@@ -246,8 +306,6 @@ div.wp-block-buttons a.wp-block-button__link {
 /* wp-block-button__link has-text-align-center wp-element-button */
 
 /* wp-block-button__link wp-element-button */
-
-
 
 /* footer-container on the content container (excluding social media links)  */
 /* footer-nav on the footer <ul> holding the nav links */
