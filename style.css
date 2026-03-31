@@ -417,6 +417,10 @@ div.mens-content {
 		max-width: 18.75rem;
 		height: auto;
 	}
+
+	section.mens-top-level-content-container p {
+		font-size: 1.25rem!important;
+	}
 }
 
 @media (min-width: 75rem) {
@@ -431,7 +435,7 @@ div.mens-content {
 	}
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 108.4375rem) {
 	.mens-top-level-content-container {
 		margin-top: -11rem!important;
 		max-width: 50.75rem;
