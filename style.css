@@ -66,12 +66,13 @@ div.sales--banner-track.top-level-sales-banner p {
 }
 
 :root :where(.wp-block-separator) {
-	color: unset!important;
+	color: unset !important;
 }
 
 .wp-block-separator {
-	border-top: unset!important;
+	border-top: unset !important;
 }
+
 /* ----- */
 /* 
 .home-hero-inner-container {
@@ -105,7 +106,7 @@ div.sales--banner-track.top-level-sales-banner p {
 }
 
 .site-header,
-.site-header li > .site-header a {
+.site-header li>.site-header a {
 	background-color: var(--dark-grey);
 	color: white;
 	text-decoration: none;
@@ -228,8 +229,8 @@ div.wp-block-buttons a.wp-block-button__link {
 	background-color: unset !important;
 	border-color: unset !important;
 	border-width: unset !important;
-	border-style: unset!important;
-	padding: 0.75rem 1rem!important;
+	border-style: unset !important;
+	padding: 0.75rem 1rem !important;
 }
 
 .has-cyan-bluish-gray-background-color {
@@ -243,12 +244,13 @@ div.wp-block-buttons a.wp-block-button__link {
 
 .divider {
 	background-color: var(--beige) !important;
-	height: 0.25rem!important;
-	margin-top: 3.25rem!important;
-	margin-bottom: 3.25rem!important;
-	max-width: 60.375rem!important;
-	padding-left: 1.5rem!important;
-	padding-right: 1.5rem!important;
+	height: 0.25rem !important;
+	margin-top: 3.25rem !important;
+	margin-bottom: 3.25rem !important;
+	max-width: 60.375rem !important;
+	margin: auto;
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
 }
 
 .hero-triangle-container {
@@ -270,17 +272,87 @@ div.wp-block-buttons a.wp-block-button__link {
 }
 
 .essentials--triangle {
-	width: 100vw!important;
-	height: 14.0625rem!important;
+	width: 100vw !important;
 }
 
 :root :where(a:where(:not(.wp-element-button))) {
-	text-decoration: none!important;
+	text-decoration: none !important;
 }
 
 .wp-block-social-links .wp-social-link svg {
-	width: 3rem!important;
-	height: 3rem!important;
+	width: 3rem !important;
+	height: 3rem !important;
+}
+
+:where(.wp-site-blocks)>* {
+	margin-block-start: 0 !important;
+}
+
+/* 4 columns on desktop for the products: */
+.wc-block-product-template__responsive.columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* 2 columns on mobile for the products: */
+@media (max-width: 48rem) {
+	.wc-block-product-template__responsive.columns-4 {
+		grid-template-columns: repeat(2, 1fr) !important;
+	}
+}
+
+section.thobes-container {
+	padding-bottom: 3rem;
+}
+
+div.mens-content {
+	margin-bottom: 4rem;
+}
+
+.thobes--container-heading {
+	margin-top: 4.25rem;
+}
+
+.mens-products--card {
+	padding: 1rem;
+	padding-bottom: 3rem;
+	color: white!important;
+}
+
+.mens-product--card-heading {
+	font-weight: 400!important;
+}
+
+.mens-product--card-price {
+	font-weight: bold!important;
+}
+
+.main-level-page-heading {
+	font-size: 2rem;
+	margin-bottom: 4rem;
+}
+
+@media (min-width: 48rem) {
+	h2.thobes--container-heading {
+		font-size: 3rem!important;
+		margin-top: 6rem;
+	}
+
+	section.thobes-container {
+		padding-bottom: 10.25rem;
+	}
+
+	div.mens-content {
+		margin-bottom: 7.75rem;
+	}
+
+	.mens-products--card {
+		padding: 2rem;
+		padding-bottom: 4rem;
+	}
+
+	.main-level-page-heading {
+		font-size: 3rem;
+	}
 }
 
 @media (width > 62.5rem) {
@@ -315,8 +387,10 @@ div.wp-block-buttons a.wp-block-button__link {
 /* footer-container on the content container (excluding social media links)  */
 /* footer-nav on the footer <ul> holding the nav links */
 
-.wp-block-search__button {padding-top: 1px;}
+.wp-block-search__button {
+	padding-top: 1px;
+}
 
 .woocommerce ul.products li.product-category {
-    width: 100% !important;
+	width: 100% !important;
 }
