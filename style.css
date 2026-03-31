@@ -360,8 +360,17 @@ div.mens-content {
 
 .mens-products--card-contents * {
 	color: white!important;
+	text-align: left!important;
 }
 
+.wc-block-product-template li .wp-block-post-title {
+	margin-top: unset!important;
+}
+
+.is-layout-constrained > .alignright {
+	margin-inline-start: 0!important;
+	margin-inline-end: 0!important;
+}
 
 @media (min-width: 48rem) {
 
@@ -371,11 +380,10 @@ div.mens-content {
 		padding-bottom: 4rem;
 	}
 
-
 	/* ------- */
 	h2.thobes--container-heading {
 		font-size: 3rem!important;
-		margin-top: 6rem!important;
+		padding-top: 6rem!important;
 	}
 
 	section.thobes-container {
@@ -406,17 +414,27 @@ div.mens-content {
 
 	.top-level-page-desktop-svg-container svg.top-level-page-svg {
 		width: 15%;
+		max-width: 18.75rem;
 		height: auto;
 	}
 }
 
 @media (min-width: 75rem) {
 	.mens-top-level-content-container {
-		margin-top: -4.5rem!important;
+		margin-top: -7rem!important;
+		max-width: 50.75rem;
+		margin: auto;
 	}
 
 	.main-level-page-heading {
 		margin-bottom: 1.5rem!important;
+	}
+}
+
+@media (min-width: 90rem) {
+	.mens-top-level-content-container {
+		margin-top: -11rem!important;
+		max-width: 50.75rem;
 	}
 }
 
