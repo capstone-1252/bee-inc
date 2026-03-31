@@ -331,6 +331,11 @@ div.mens-content {
 	margin-bottom: 1.5rem;
 }
 
+.top-level-page-svg {
+	width: 5.5rem; 
+	height: auto;
+}
+
 .top-level-page-mobile-svg-container {
     display: flex!important;
 }
@@ -339,10 +344,38 @@ div.mens-content {
 	display: none!important;
 }
 
+/* ------- */
+
+.product-image img {
+	object-fit: unset!important;
+	aspect-ratio: unset!important;
+	height: 55%!important;
+	width: 100%!important;
+}
+
+.mens-products--card-contents {
+	padding: 1rem;
+	padding-bottom: 3rem;
+}
+
+.mens-products--card-contents * {
+	color: white!important;
+}
+
+
 @media (min-width: 48rem) {
+
+
+	.mens-products--card-contents {
+		padding: 2rem;
+		padding-bottom: 4rem;
+	}
+
+
+	/* ------- */
 	h2.thobes--container-heading {
 		font-size: 3rem!important;
-		margin-top: 6rem;
+		margin-top: 6rem!important;
 	}
 
 	section.thobes-container {
@@ -386,12 +419,6 @@ div.mens-content {
 		margin-bottom: 1.5rem!important;
 	}
 }
-
-/* @media (min-width: 48rem) {.top-level-page-svg {
-		width: 20%;
-		height: 10rem;
-margin-top: -1rem;
-	} .top-level-page-svg--left {position: relative; left: 0;}} */
 
 @media (width > 62.5rem) {
 
