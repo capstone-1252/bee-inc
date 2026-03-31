@@ -305,7 +305,7 @@ section.thobes-container {
 }
 
 div.mens-content {
-	margin-bottom: 4rem;
+	margin-bottom: 4rem!important;
 }
 
 .thobes--container-heading {
@@ -328,7 +328,15 @@ div.mens-content {
 
 .main-level-page-heading {
 	font-size: 2rem;
-	margin-bottom: 4rem;
+	margin-bottom: 1.5rem;
+}
+
+.top-level-page-mobile-svg-container {
+    display: flex!important;
+}
+
+.top-level-page-desktop-svg-container {
+	display: none!important;
 }
 
 @media (min-width: 48rem) {
@@ -342,7 +350,7 @@ div.mens-content {
 	}
 
 	div.mens-content {
-		margin-bottom: 7.75rem;
+		margin-bottom: 7.75rem!important;
 	}
 
 	.mens-products--card {
@@ -352,8 +360,38 @@ div.mens-content {
 
 	.main-level-page-heading {
 		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	div.top-level-page-mobile-svg-container {
+		display: none!important;
+	}
+
+	div.top-level-page-desktop-svg-container {
+		display: flex!important;
+	}
+
+	.top-level-page-desktop-svg-container svg.top-level-page-svg {
+		width: 15%;
+		height: auto;
 	}
 }
+
+@media (min-width: 75rem) {
+	.mens-top-level-content-container {
+		margin-top: -4.5rem!important;
+	}
+
+	.main-level-page-heading {
+		margin-bottom: 1.5rem!important;
+	}
+}
+
+/* @media (min-width: 48rem) {.top-level-page-svg {
+		width: 20%;
+		height: 10rem;
+margin-top: -1rem;
+	} .top-level-page-svg--left {position: relative; left: 0;}} */
 
 @media (width > 62.5rem) {
 
