@@ -385,6 +385,27 @@ div.mens-content {
 	display: unset!important;
 }
 
+input.wp-block-search__input {
+	position: absolute;
+	top: 100%;
+	right: 0%;
+	max-width: 64rem;
+	background-color: var(--dark-grey);
+	color: white!important;
+	border-bottom-left-radius: 1rem!important;
+	border-bottom-right-radius: 1rem!important;
+}
+
+.wp-block-search__inside-wrapper {
+	color: white!important;
+}
+
+input.wp-block-search__input:hover {
+	border: unset!important;
+	border-color: transparent!important;
+	outline: none;
+}
+
 /* ------- */
 
 .product-image img {
