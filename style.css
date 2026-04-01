@@ -344,6 +344,15 @@ div.mens-content {
 	display: none!important;
 }
 
+.site-title-heading {
+	font-size: 1rem;
+	width: 23%;
+}
+
+.header--nav-container * {
+	font-size: 1rem;
+}
+
 /* ------- */
 
 .product-image img {
@@ -374,6 +383,10 @@ div.mens-content {
 
 @media (min-width: 48rem) {
 
+
+	.site-title-heading {
+		font-size: 1.25rem;
+	}
 
 	.mens-products--card-contents {
 		padding: 2rem;
@@ -420,6 +433,15 @@ div.mens-content {
 
 	section.mens-top-level-content-container p {
 		font-size: 1.25rem!important;
+	}
+
+	.site-title-heading {
+		font-size: 1.25rem;
+		width: unset;
+	}
+	
+	.header--nav-container * {
+		font-size: 1.25rem;
 	}
 }
 
