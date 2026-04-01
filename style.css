@@ -359,6 +359,32 @@ div.mens-content {
 	font-size: 1rem;
 }
 
+.header-container {
+	max-width: 76.75rem;
+	margin: auto;
+}
+
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+	height: 1rem!important;
+	margin-left: 0.3rem!important;
+}
+
+.wp-block-navigation-submenu__toggle svg {
+	transition: transform 0.25s ease;
+}
+
+.wp-block-navigation-submenu__toggle svg path {
+	stroke-width: unset;
+}
+
+.search-btn button svg {
+	transform: rotate(270deg);
+}
+
+.search-btn button {
+	display: unset!important;
+}
+
 /* ------- */
 
 .product-image img {
