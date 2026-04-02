@@ -395,3 +395,34 @@ add_action('wp_body_open', function () {
         </div>
       </div>';
 });
+
+function display_chartfield_content()
+{
+	$related_post = get_field('chartfield');
+
+	if (!$related_post) {
+		return '';
+	}
+
+	// If the field returns a Post Object
+	if (is_object($related_post) && isset($related_post->ID)) {
+		$post_id = $related_post->ID;
+	} else {
+		// If the field returns a Post ID
+		$post_id = $related_post;
+	}
+
+	$post = get_post($post_id);
+
+	if (!$post) {
+		return '';
+	}
+
+	$output  = '<article class="chartfield-content">';
+	$output .= get_the_post_thumbnail($post_id, 'large');
+	$output .= apply_filters('the_content', $post->post_content);
+	$output .= '</article>';
+
+	return $output;
+}
+add_shortcode('chartfield_content', 'display_chartfield_content');

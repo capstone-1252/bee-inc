@@ -48,11 +48,9 @@
 <!-- wp:woocommerce/product-price {"isDescendentOfSingleProductTemplate":true,"fontSize":"large"} /-->
 
 <!-- wp:details {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"backgroundColor":"base","textColor":"contrast"} -->
-<details class="wp-block-details has-contrast-color has-base-background-color has-text-color has-background has-link-color"><summary>Size Chart</summary><!-- wp:group {"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"placeholder":"Type / to add a hidden block"} -->
-<p></p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:group --></details>
+<details class="wp-block-details has-contrast-color has-base-background-color has-text-color has-background has-link-color"><summary>Size Chart</summary><!-- wp:shortcode -->
+[chartfield_content]
+<!-- /wp:shortcode --></details>
 <!-- /wp:details --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></main>
@@ -109,7 +107,7 @@
 <h2 class="wp-block-heading alignwide has-text-align-center" style="margin-bottom:1rem">You might also like:</h2>
 <!-- /wp:heading -->
 
-<!-- wp:woocommerce/product-collection {"queryId":137,"query":{"perPage":5,"pages":1,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":5,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/related","hideControls":["inherit"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":true,"previewMessage":"Actual products will vary depending on the product being viewed."},"align":"wide"} -->
+<!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":5,"pages":1,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":[],"isProductCollectionBlock":true,"featured":false,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":5,"shrinkColumns":true},"dimensions":{"widthType":"fill"},"collection":"woocommerce/product-collection/related","hideControls":["inherit"],"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":true,"previewMessage":"Actual products will vary depending on the product being viewed."},"align":"wide"} -->
 <div class="wp-block-woocommerce-product-collection alignwide"><!-- wp:woocommerce/product-template -->
 <!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true} -->
 <!-- wp:woocommerce/product-sale-badge {"align":"right"} /-->
