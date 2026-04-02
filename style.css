@@ -382,8 +382,14 @@ h2.womens-second-products-heading {
 	width: 23%;
 }
 
+.site-title-heading:hover {
+	color: white!important;
+	text-decoration: underline;
+}
+
 .header--nav-container * {
 	font-size: 1rem;
+	text-decoration: underline;
 }
 
 .header-container {
@@ -612,4 +618,28 @@ ul.wc-block-product-template__responsive.columns-4 li {
 section.wp-block-group.alignwide.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained.clear-bg {
 	background-color: unset!important;
 	color: black!important;
+}
+
+.wp-block-navigation__responsive-container-close, .wp-block-navigation__responsive-container-open {
+	background: unset!important;
+}
+
+.wp-block-navigation__responsive-container-close svg {
+	color: white!important;
+}
+
+.womens-submenu::after {
+	content: '';
+	width: 0.25rem;
+	height: 100%;
+	background-color: white;
+}
+
+div.wp-block-navigation__responsive-container.is-menu-open {
+	background-color: var(--dark-grey)!important;
+	color: white!important;
+}
+
+.site-header svg {
+	color: white!important;
 }
