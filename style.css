@@ -275,6 +275,22 @@ div.wp-block-buttons a.wp-block-button__link {
 	width: 100vw !important;
 }
 
+.wp-block-button__link.wc-block-components-product-button__button {
+	text-transform: uppercase;
+	background-color: var(--beige)!important;
+	border-radius: 1rem;
+	padding: 1rem!important;
+	font-weight: 400;
+	color: #000;
+	border: none;
+	width: 85%!important;
+}
+
+.wp-block-button__link.wc-block-components-product-button__button:hover {
+	background-color: var(--warmer-beige)!important;
+	transition: transform 0.25s ease;
+}
+
 :root :where(a:where(:not(.wp-element-button))) {
 	text-decoration: none !important;
 }
@@ -306,48 +322,50 @@ section.product-template-container {
 }
 
 div.mens-content {
-	margin-bottom: 4rem!important;
+	margin-bottom: 4rem !important;
 }
 
 .thobes--container-heading,
 .product-template--container-heading {
-	margin-top: 4.25rem;
+	margin-top: 4.25rem !important;
 }
 
 .mens-products--card {
 	padding: 1rem;
 	padding-bottom: 3rem;
-	color: white!important;
+	color: white !important;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .product-template-container {
-	color: white!important;
+	color: white !important;
 }
 
 .mens-product--card-heading {
-	font-weight: 400!important;
+	font-weight: 400 !important;
 }
 
 .mens-product--card-price {
-	font-weight: bold!important;
+	font-weight: bold !important;
 }
 
 .main-level-page-heading {
 	font-size: 2rem;
 	margin-bottom: 1.5rem;
+	text-align: center;
 }
 
 .top-level-page-svg {
-	width: 5.5rem; 
+	width: 5.5rem;
 	height: auto;
 }
 
 .top-level-page-mobile-svg-container {
-    display: flex!important;
+	display: flex !important;
 }
 
 .top-level-page-desktop-svg-container {
-	display: none!important;
+	display: none !important;
 }
 
 .site-title-heading {
@@ -365,8 +383,8 @@ div.mens-content {
 }
 
 .wp-block-navigation .wp-block-navigation__submenu-icon {
-	height: 1rem!important;
-	margin-left: 0.3rem!important;
+	height: 1rem !important;
+	margin-left: 0.3rem !important;
 }
 
 .wp-block-navigation-submenu__toggle svg {
@@ -382,7 +400,7 @@ div.mens-content {
 }
 
 .search-btn button {
-	display: unset!important;
+	display: unset !important;
 }
 
 input.wp-block-search__input {
@@ -391,28 +409,28 @@ input.wp-block-search__input {
 	right: 0%;
 	max-width: 64rem;
 	background-color: var(--dark-grey);
-	color: white!important;
-	border-bottom-left-radius: 1rem!important;
-	border-bottom-right-radius: 1rem!important;
+	color: white !important;
+	border-bottom-left-radius: 1rem !important;
+	border-bottom-right-radius: 1rem !important;
 }
 
 .wp-block-search__inside-wrapper {
-	color: white!important;
+	color: white !important;
 }
 
 input.wp-block-search__input:hover {
-	border: unset!important;
-	border-color: transparent!important;
+	border: unset !important;
+	border-color: transparent !important;
 	outline: none;
 }
 
 /* ------- */
 
 .product-image img {
-	object-fit: unset!important;
-	aspect-ratio: unset!important;
-	height: 55%!important;
-	width: 100%!important;
+	object-fit: unset !important;
+	aspect-ratio: unset !important;
+	height: 55% !important;
+	width: 100% !important;
 }
 
 .mens-products--card-contents {
@@ -421,17 +439,32 @@ input.wp-block-search__input:hover {
 }
 
 .mens-products--card-contents * {
-	color: white!important;
-	text-align: left!important;
+	color: white !important;
+	text-align: left !important;
+}
+
+h2.mens-product--card-heading {
+	margin-inline-start: 0 !important;
+	margin-inline-end: 0 !important;
+}
+
+ul.wc-block-product-template__responsive.columns-4 li {
+	margin-bottom: 3rem !important;
 }
 
 .wc-block-product-template li .wp-block-post-title {
-	margin-top: unset!important;
+	margin-top: unset !important;
 }
 
-.is-layout-constrained > .alignright {
-	margin-inline-start: 0!important;
-	margin-inline-end: 0!important;
+.is-layout-constrained>.alignright {
+	margin-inline-start: 0 !important;
+	margin-inline-end: 0 !important;
+}
+
+@media (width < 64rem) {
+	.wc-block-product-template__responsive.columns-4 {
+		grid-template-columns: unset;
+	}
 }
 
 @media (min-width: 48rem) {
@@ -449,8 +482,8 @@ input.wp-block-search__input:hover {
 	/* ------- */
 	h2.thobes--container-heading,
 	h2.product-template--container-heading {
-		font-size: 3rem!important;
-		padding-top: 6rem!important;
+		font-size: 3rem !important;
+		padding-top: 6rem !important;
 	}
 
 	section.thobes-container,
@@ -459,7 +492,7 @@ input.wp-block-search__input:hover {
 	}
 
 	div.mens-content {
-		margin-bottom: 7.75rem!important;
+		margin-bottom: 7.75rem !important;
 	}
 
 	.mens-products--card {
@@ -473,11 +506,11 @@ input.wp-block-search__input:hover {
 	}
 
 	div.top-level-page-mobile-svg-container {
-		display: none!important;
+		display: none !important;
 	}
 
 	div.top-level-page-desktop-svg-container {
-		display: flex!important;
+		display: flex !important;
 	}
 
 	.top-level-page-desktop-svg-container svg.top-level-page-svg {
@@ -487,34 +520,35 @@ input.wp-block-search__input:hover {
 	}
 
 	section.mens-top-level-content-container p {
-		font-size: 1.25rem!important;
+		font-size: 1.25rem !important;
 	}
 
 	.site-title-heading {
 		font-size: 1.25rem;
 		width: unset;
 	}
-	
+
 	.header--nav-container * {
 		font-size: 1.25rem;
 	}
+
 }
 
 @media (min-width: 75rem) {
 	.mens-top-level-content-container {
-		margin-top: -7rem!important;
+		margin-top: -7rem !important;
 		max-width: 50.75rem;
 		margin: auto;
 	}
 
 	.main-level-page-heading {
-		margin-bottom: 1.5rem!important;
+		margin-bottom: 1.5rem !important;
 	}
 }
 
 @media (min-width: 108.4375rem) {
 	.mens-top-level-content-container {
-		margin-top: -11rem!important;
+		margin-top: -11rem !important;
 		max-width: 50.75rem;
 	}
 }
@@ -561,7 +595,7 @@ input.wp-block-search__input:hover {
 
 /* the triangle in the 404 page */
 
-.error-page-section--triangle{
+.error-page-section--triangle {
 	max-width: 30%;
 	max-height: 30%;
 }
