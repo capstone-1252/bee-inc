@@ -330,11 +330,15 @@ div.mens-content {
 	margin-top: 4.25rem !important;
 }
 
-.mens-products--card {
+.mens-products--card li {
 	padding: 1rem;
 	padding-bottom: 3rem;
 	color: white !important;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.is-layout-constrained > .alignright {
+	float: unset!important;
 }
 
 .product-template-container {
