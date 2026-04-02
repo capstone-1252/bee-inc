@@ -284,6 +284,8 @@ div.wp-block-buttons a.wp-block-button__link {
 	color: #000;
 	border: none;
 	width: 85%!important;
+	word-break: unset!important;
+	white-space: nowrap!important;
 }
 
 .wp-block-button__link.wc-block-components-product-button__button:hover {
@@ -326,8 +328,11 @@ div.mens-content {
 }
 
 .thobes--container-heading,
-.product-template--container-heading {
+.product-template--container-heading,
+h2.womens-products-heading,
+h2.womens-second-products-heading {
 	margin-top: 4.25rem !important;
+	font-weight: 400!important;
 }
 
 .mens-products--card li {
@@ -465,12 +470,6 @@ ul.wc-block-product-template__responsive.columns-4 li {
 	margin-inline-end: 0 !important;
 }
 
-@media (width < 64rem) {
-	.wc-block-product-template__responsive.columns-4 {
-		grid-template-columns: unset;
-	}
-}
-
 @media (min-width: 48rem) {
 
 
@@ -488,6 +487,12 @@ ul.wc-block-product-template__responsive.columns-4 li {
 	h2.product-template--container-heading {
 		font-size: 3rem !important;
 		padding-top: 6rem !important;
+	}
+
+	h2.womens-products-heading,
+	h2.womens-second-products-heading {
+		font-size: 3rem !important;
+		color: black !important;
 	}
 
 	section.thobes-container,
@@ -602,4 +607,9 @@ ul.wc-block-product-template__responsive.columns-4 li {
 .error-page-section--triangle {
 	max-width: 30%;
 	max-height: 30%;
+}
+
+section.wp-block-group.alignwide.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained.clear-bg {
+	background-color: unset!important;
+	color: black!important;
 }
