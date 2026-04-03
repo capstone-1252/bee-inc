@@ -369,8 +369,12 @@ div.mens-content {
 h2.womens-products-heading,
 h2.womens-second-products-heading {
 	/* margin-top: 4.25rem !important; */
-	font-weight: 600 !important;
+	font-weight: 700!important;
 	font-size: 1.5rem !important;
+}
+
+.is-menu-open .wp-block-search.wp-block-search__button-only .wp-block-search__button {
+	background-color: var(--beige)!important;
 }
 
 .first-product-section {
@@ -505,7 +509,7 @@ input.wp-block-search__input:hover {
 
 .product-image img {
 	object-fit: unset !important;
-	aspect-ratio: unset !important;
+	aspect-ratio: 1 / 1 !important;
 	height: 55% !important;
 	width: 100% !important;
 }
