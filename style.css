@@ -326,16 +326,16 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 	box-shadow: unset !important;
 }
 
+.is-menu-open input.wp-block-search__input {
+	position: unset !important;
+	width: 100%;
+	background-color: white !important;
+	border-top-left-radius: 1rem !important;
+	border-bottom-right-radius: unset !important;
+}
+
 /* 2 columns on mobile for the products: */
 @media (max-width: 48rem) {
-
-	input.wp-block-search__input {
-		position: unset !important;
-		width: 100%;
-		background-color: white !important;
-		border-top-left-radius: 1rem !important;
-		border-bottom-right-radius: unset !important;
-	}
 
 	.wp-block-search__input {
 		align-self: center;
@@ -355,7 +355,7 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 
 }
 
-section.thobes-container,
+div.thobes-container,
 section.product-template-container {
 	padding-bottom: 3rem;
 }
@@ -371,6 +371,10 @@ h2.womens-second-products-heading {
 	/* margin-top: 4.25rem !important; */
 	font-weight: 600 !important;
 	font-size: 1.5rem !important;
+}
+
+.first-product-section {
+	padding-top: 3rem!important;
 }
 
 .mens-products--card li {
@@ -509,6 +513,7 @@ input.wp-block-search__input:hover {
 .mens-products--card-contents {
 	padding: 1rem;
 	padding-top: 0;
+	padding-bottom: unset!important;
 }
 
 .mens-products--card-contents * {
@@ -558,10 +563,6 @@ ul.wc-block-product-template__responsive.columns-4 li {
 		font-size: 1.25rem;
 	}
 
-	.mens-products--card-contents {
-		padding: 2rem;
-	}
-
 	/* ------- */
 	h2.thobes--container-heading,
 	h2.product-template--container-heading,
@@ -570,7 +571,6 @@ ul.wc-block-product-template__responsive.columns-4 li {
 		/* margin-top: 4.25rem !important; */
 		font-weight: 400 !important;
 		font-size: 3rem !important;
-		padding-top: 6rem!important;
 	}
 
 	h2.womens-products-heading,
@@ -579,7 +579,7 @@ ul.wc-block-product-template__responsive.columns-4 li {
 		color: black !important;
 	}
 
-	section.thobes-container,
+	div.thobes-container,
 	section.product-template-container {
 		padding-bottom: 10.25rem;
 	}
