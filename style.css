@@ -181,6 +181,16 @@ div.wp-block-buttons a.wp-block-button__link {
 	font-weight: 500;
 }
 
+.essentials-container,
+.mens-container {
+	padding-top: 3rem!important;
+}
+
+ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
+	border-bottom-left-radius: 1rem!important;
+	border-bottom-right-radius: 1rem!important;
+}
+
 .cta--primary {
 	background-color: var(--dark-grey);
 	border-radius: 1rem;
@@ -426,7 +436,7 @@ h2.womens-second-products-heading {
 	padding-top: 0.25rem !important;
 }
 
-.header--nav-container *:hover {
+.header--nav-container li:hover {
 	text-decoration: underline;
 }
 
@@ -444,6 +454,10 @@ h2.womens-second-products-heading {
 	transition: transform 0.25s ease;
 }
 
+ul.wp-block-navigation:not(.has-text-color) .wp-block-navigation__submenu-container {
+	color: white!important;
+}
+
 .wp-block-navigation-submenu__toggle svg path {
 	stroke-width: unset;
 }
@@ -454,6 +468,12 @@ h2.womens-second-products-heading {
 
 .search-btn button {
 	display: unset !important;
+}
+
+.search-icon {
+	box-shadow: unset!important;
+	background-color: unset!important;
+	height: 2.125rem;
 }
 
 input.wp-block-search__input {
@@ -488,7 +508,7 @@ input.wp-block-search__input:hover {
 
 .mens-products--card-contents {
 	padding: 1rem;
-	padding-bottom: 3rem;
+	padding-top: 0;
 }
 
 .mens-products--card-contents * {
@@ -526,7 +546,7 @@ ul.wc-block-product-template__responsive.columns-4 li {
 		text-decoration: none!important;
 	}
 	
-	button[aria-expanded="true"] + ul.wp-block-navigation__submenu-container ul li a:hover {
+	button[aria-expanded="true"] + ul.wp-block-navigation__submenu-container ul li a.wp-block-navigation-item__content:hover {
 		text-decoration: underline;
 	}
 
@@ -540,7 +560,6 @@ ul.wc-block-product-template__responsive.columns-4 li {
 
 	.mens-products--card-contents {
 		padding: 2rem;
-		padding-bottom: 4rem;
 	}
 
 	/* ------- */
