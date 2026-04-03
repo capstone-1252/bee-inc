@@ -275,15 +275,16 @@ div.wp-block-buttons a.wp-block-button__link {
 	width: 100vw !important;
 }
 
-.wp-block-button__link.wc-block-components-product-button__button {
+.wc-block-components-product-button__button {
 	text-transform: uppercase;
 	background-color: var(--beige) !important;
 	border-radius: 1rem;
-	padding: 1rem !important;
+	padding: 1rem 5rem!important;
 	font-weight: 400;
 	color: #000;
 	border: none;
-	width: 85% !important;
+	width: 90% !important;
+	margin: auto;
 	word-break: unset !important;
 	white-space: nowrap !important;
 }
