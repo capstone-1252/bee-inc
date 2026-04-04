@@ -381,6 +381,10 @@ h2.womens-second-products-heading {
 	border-bottom-left-radius: 0;
 }
 
+.is-menu-open .wp-block-search.wp-block-search__button-only .wp-block-search__button:hover {
+	background-color: var(--warmer-beige);
+}
+
 .first-product-section {
 	padding-top: 3rem!important;
 }
@@ -452,8 +456,15 @@ h2.womens-second-products-heading {
 	text-decoration: underline;
 }
 
-.is-menu-open .header--nav-container li:hover > a {
+/* .is-menu-open .header--nav-container li:hover > a {
     text-decoration: underline!important;
+} */
+.is-menu-open .header--nav-container li:hover:not(:has(.womens-submenu li:hover)) > a {
+	text-decoration: underline!important;
+}
+
+.is-menu-open .header--nav-container .womens-submenu li:hover > a {
+	text-decoration: underline!important;
 }
 
 .header-container {
@@ -501,6 +512,14 @@ input.wp-block-search__input {
 	color: white !important;
 	border-bottom-left-radius: 1rem !important;
 	border-bottom-right-radius: 1rem !important;
+}
+
+.wp-block-search__inside-wrapper {
+	align-items: center;
+}
+
+.is-menu-open input.wp-block-search__input {
+	color: black!important;
 }
 
 .wp-block-search__inside-wrapper {
@@ -565,7 +584,7 @@ ul.wc-block-product-template__responsive.columns-4 li {
 }
 
 .wc-block-components-product-price .woocommerce-Price-amount {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
 
 del[aria-hidden="true"] span.woocommerce-Price-amount {
@@ -574,10 +593,6 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 }
 
 @media (min-width: 48rem) {
-
-	.wc-block-components-product-price .woocommerce-Price-amount {
-		font-size: 1.5rem;
-	}
 
 	del[aria-hidden="true"] span.woocommerce-Price-amount {
 		font-size: 1rem;
@@ -619,7 +634,7 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 	h2.womens-products-heading,
 	h2.womens-second-products-heading {
 		/* margin-top: 4.25rem !important; */
-		font-weight: 400 !important;
+		font-weight: 700 !important;
 		font-size: 3rem !important;
 	}
 
@@ -756,6 +771,11 @@ section.wp-block-group.alignwide.has-global-padding.is-layout-constrained.wp-blo
 
 .wp-block-navigation__responsive-container-close svg {
 	color: white !important;
+}
+
+.wp-block-navigation__responsive-container-close {
+	margin-right: 2.010rem;
+	margin-top: 0.5rem;
 }
 
 .womens-submenu::after {
