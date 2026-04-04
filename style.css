@@ -63,6 +63,7 @@ div.sales--banner-track.top-level-sales-banner {
 
 div.sales--banner-track.top-level-sales-banner p {
 	font-weight: bold;
+	font-size: 1rem!important;
 }
 
 :root :where(.wp-block-separator) {
@@ -332,6 +333,7 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 	background-color: white !important;
 	border-top-left-radius: 1rem !important;
 	border-bottom-right-radius: unset !important;
+	border: 0.125rem solid var(--beige);
 }
 
 /* 2 columns on mobile for the products: */
@@ -342,7 +344,6 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 	}
 
 	.wp-block-search__button.wp-element-button svg {
-		padding: 1.5rem;
 		background-color: unset !important;
 		width: 1.125rem;
 		height: 1.125rem;
@@ -375,6 +376,9 @@ h2.womens-second-products-heading {
 
 .is-menu-open .wp-block-search.wp-block-search__button-only .wp-block-search__button {
 	background-color: var(--beige)!important;
+	height: 100%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 .first-product-section {
@@ -384,7 +388,7 @@ h2.womens-second-products-heading {
 .mens-products--card li {
 	padding-bottom: 3rem;
 	color: white !important;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
 .is-layout-constrained>.alignright {
@@ -446,6 +450,10 @@ h2.womens-second-products-heading {
 
 .header--nav-container li:hover {
 	text-decoration: underline;
+}
+
+.is-menu-open .header--nav-container li:hover > a {
+    text-decoration: underline!important;
 }
 
 .header-container {
@@ -543,7 +551,45 @@ ul.wc-block-product-template__responsive.columns-4 li {
 	margin-inline-end: 0 !important;
 }
 
+.product-card--sale-text * {
+	font-size: 1rem;
+}
+
+.product-card--sale-text div {
+	box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.18);
+}
+
+.product-card--sale-text div.wc-block-components-product-sale-badge.has-poppins-font-family {
+	right: 0%!important;
+	top: 0%!important;
+}
+
+.wc-block-components-product-price .woocommerce-Price-amount {
+	font-size: 1.25rem;
+}
+
+del[aria-hidden="true"] span.woocommerce-Price-amount {
+	font-weight: 400!important;
+	font-size: calc(1.25rem / 1.125)
+}
+
 @media (min-width: 48rem) {
+
+	.wc-block-components-product-price .woocommerce-Price-amount {
+		font-size: 1.5rem;
+	}
+
+	del[aria-hidden="true"] span.woocommerce-Price-amount {
+		font-size: 1rem;
+	}
+
+	div.sales--banner-track.top-level-sales-banner p {
+		font-size: 1.25rem!important;
+	}
+
+	.product-card--sale-text * {
+		font-size: 1.25rem;
+	}
 
 	button[aria-expanded="true"] + ul.wp-block-navigation__submenu-container {
 		background-color: var(--dark-grey)!important;
