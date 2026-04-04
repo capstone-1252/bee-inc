@@ -803,3 +803,7 @@ div.wp-block-navigation__responsive-container.is-menu-open {
 hr {
 	border: 1px solid #D2B391 !important;
 }
+
+.text-price-add-to-cart-spacing {
+	padding-left: 1.125rem!important;
+}
