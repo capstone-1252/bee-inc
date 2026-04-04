@@ -779,3 +779,7 @@ div.wp-block-navigation__responsive-container.is-menu-open {
 		grid-template-columns: repeat(2, 1fr) !important;
 	}
 }
+
+hr {
+	border: 1px solid #D2B391 !important;
+}

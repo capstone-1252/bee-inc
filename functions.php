@@ -426,3 +426,56 @@ function display_chartfield_content()
 	return $output;
 }
 add_shortcode('chartfield_content', 'display_chartfield_content');
+
+function wc_attributes_exclude_size_shortcode($atts) {
+    global $product;
+
+    if (!$product) return '';
+
+    $attributes = $product->get_attributes();
+    $exclude = ['pa_size']; // excluded attribute slugs
+
+    $items = [];
+
+    // Add product attributes except excluded ones
+    if (!empty($attributes)) {
+        foreach ($attributes as $attribute) {
+            $attr_name = $attribute->get_name();
+
+            if (in_array($attr_name, $exclude, true)) {
+                continue;
+            }
+
+            if ($attribute->get_visible()) {
+                $label = wc_attribute_label($attr_name);
+
+                if ($attribute->is_taxonomy()) {
+                    $values = wc_get_product_terms(
+                        $product->get_id(),
+                        $attr_name,
+                        ['fields' => 'names']
+                    );
+                } else {
+                    $values = $attribute->get_options();
+                }
+
+                if (!empty($values)) {
+                    $items[] = '<div class="product-attribute-item"><strong>' . esc_html($label) . ':</strong> ' . esc_html(implode(', ', $values)) . '</div>';
+                }
+            }
+        }
+    }
+
+    // Add dimensions
+    $dimensions = wc_format_dimensions($product->get_dimensions(false));
+    if (!empty($dimensions)) {
+        $items[] = '<div class="product-attribute-item"><strong>Dimensions:</strong> ' . esc_html($dimensions) . '</div>';
+    }
+
+    if (empty($items)) {
+        return '';
+    }
+
+    return '<div class="product-attributes">' . implode('', $items) . '</div>';
+}
+add_shortcode('attributes_no_size', 'wc_attributes_exclude_size_shortcode');
