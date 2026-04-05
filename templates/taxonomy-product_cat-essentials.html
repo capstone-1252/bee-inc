@@ -49,8 +49,8 @@
     <p class="has-text-align-center has-poppins-font-family" style="font-size:1rem"><strong>ESSENTIALS</strong></p>
     <!-- /wp:paragraph -->
     
-    <!-- wp:heading {"level":1,"className":"main-level-page-heading"} -->
-    <h1 class="wp-block-heading main-level-page-heading">BRINGING SERENITY</h1>
+    <!-- wp:heading {"textAlign":"center","level":1,"className":"main-level-page-heading"} -->
+    <h1 class="wp-block-heading has-text-align-center main-level-page-heading">BRINGING SERENITY</h1>
     <!-- /wp:heading -->
     
     <!-- wp:group {"className":"mens-content","layout":{"type":"constrained","wideSize":"37.5rem"}} -->
@@ -58,20 +58,22 @@
     <!-- /wp:group --></section>
     <!-- /wp:group -->
     
-    <!-- wp:group {"align":"wide","className":"thobes-container ","style":{"spacing":{"padding":{"bottom":"0"}}},"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignwide thobes-container" style="padding-bottom:0"><!-- wp:group {"layout":{"type":"constrained","wideSize":"76.75rem"}} -->
-    <div class="wp-block-group"><!-- wp:woocommerce/product-collection {"queryId":56,"query":{"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":true,"taxQuery":[],"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"featured":false,"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill","fixedWidth":""},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."},"align":"wide","layout":{"type":"default"}} -->
+    <!-- wp:group {"align":"wide","className":"thobes-container mens-container first-product-section","style":{"spacing":{"padding":{"bottom":"0"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignwide thobes-container mens-container first-product-section" style="padding-bottom:0"><!-- wp:group {"layout":{"type":"constrained","wideSize":"76.75rem"}} -->
+    <div class="wp-block-group"><!-- wp:woocommerce/product-collection {"queryId":20,"query":{"perPage":9,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":true,"taxQuery":[],"isProductCollectionBlock":true,"woocommerceOnSale":false,"woocommerceStockStatus":["instock","outofstock","onbackorder"],"woocommerceAttributes":[],"woocommerceHandPickedProducts":[],"featured":false,"filterable":false,"relatedBy":{"categories":true,"tags":true}},"tagName":"div","displayLayout":{"type":"flex","columns":4,"shrinkColumns":true},"dimensions":{"widthType":"fill","fixedWidth":""},"queryContextIncludes":["collection"],"__privatePreviewState":{"isPreview":false,"previewMessage":"Actual products will vary depending on the page being viewed."},"align":"wide","layout":{"type":"default"}} -->
     <div class="wp-block-woocommerce-product-collection alignwide"><!-- wp:woocommerce/product-template {"className":"mens-products\u002d\u002dcard"} -->
-    <!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true,"aspectRatio":"3/5","className":"product-image","fontSize":"small"} -->
-    <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right"} /-->
+    <!-- wp:group {"layout":{"type":"constrained"},"twStretchedLink":true} -->
+    <div class="wp-block-group tw-stretched-link"><!-- wp:woocommerce/product-image {"showSaleBadge":false,"imageSizing":"thumbnail","isDescendentOfQueryLoop":true,"aspectRatio":"3/5","className":"product-image","fontSize":"small"} -->
+    <!-- wp:woocommerce/product-sale-badge {"isDescendentOfQueryLoop":true,"align":"right","className":"product-card\u002d\u002dsale-text","textColor":"base","fontFamily":"poppins","style":{"border":{"radius":{"topLeft":"0rem","topRight":"0rem","bottomLeft":"1rem","bottomRight":"0rem"},"width":"0px","style":"none"},"typography":{"fontStyle":"normal","fontWeight":"700"},"spacing":{"margin":{"top":"0","bottom":"0","left":"0","right":"0"}},"color":{"background":"#a32424"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}}} /-->
     <!-- /wp:woocommerce/product-image -->
     
     <!-- wp:group {"className":"mens-products\u002d\u002dcard-contents","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group mens-products--card-contents"><!-- wp:post-title {"textAlign":"","isLink":true,"align":"right","className":"mens-product\u002d\u002dcard-heading","style":{"typography":{"lineHeight":"1.4"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small","__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
+    <div class="wp-block-group mens-products--card-contents"><!-- wp:post-title {"textAlign":"","isLink":true,"align":"right","className":"mens-product\u002d\u002dcard-heading text-price-add-to-cart-spacing","style":{"typography":{"lineHeight":"1.4"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small","__woocommerceNamespace":"woocommerce/product-collection/product-title"} /-->
     
-    <!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"center","className":"mens-product\u002d\u002dcard-price","textColor":"base","fontSize":"small","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}}} /-->
+    <!-- wp:woocommerce/product-price {"isDescendentOfQueryLoop":true,"textAlign":"center","className":"mens-product\u002d\u002dcard-price text-price-add-to-cart-spacing","textColor":"base","fontSize":"small","style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}}} /-->
     
-    <!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true,"className":"add-to-cart-btn"} /--></div>
+    <!-- wp:woocommerce/product-button {"isDescendentOfQueryLoop":true} /--></div>
+    <!-- /wp:group --></div>
     <!-- /wp:group -->
     <!-- /wp:woocommerce/product-template --></div>
     <!-- /wp:woocommerce/product-collection --></div>

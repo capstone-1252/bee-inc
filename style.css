@@ -305,6 +305,13 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 	transition: transform 0.25s ease;
 }
 
+@media (max-width: 32.5rem) { 
+	.wc-block-components-product-button__button {
+		padding: 1rem 1rem!important;
+		width: 100%!important;
+	}
+}
+
 :root :where(a:where(:not(.wp-element-button))) {
 	text-decoration: none !important;
 }
@@ -592,7 +599,15 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 	font-size: calc(1.25rem / 1.125)
 }
 
+.text-price-add-to-cart-spacing {
+	padding-left: 1.125rem!important;
+}
+
 @media (min-width: 48rem) {
+
+	.text-price-add-to-cart-spacing {
+		padding-left: unset!important;
+	}
 
 	del[aria-hidden="true"] span.woocommerce-Price-amount {
 		font-size: 1rem;
@@ -803,3 +818,5 @@ div.wp-block-navigation__responsive-container.is-menu-open {
 hr {
 	border: 1px solid #D2B391 !important;
 }
+
+
