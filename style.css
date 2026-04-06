@@ -470,13 +470,13 @@ h2.womens-second-products-heading {
 /* .is-menu-open .header--nav-container li:hover > a {
     text-decoration: underline!important;
 } */
-.is-menu-open .header--nav-container li:hover:not(:has(.womens-submenu li:hover)) > a {
+/* .is-menu-open .header--nav-container li:hover:not(:has(.womens-submenu li:hover)) > a {
 	text-decoration: underline!important;
 }
 
 .is-menu-open .header--nav-container .womens-submenu li:hover > a {
 	text-decoration: underline!important;
-}
+} */
 
 .header-container {
 	max-width: 76.75rem;
