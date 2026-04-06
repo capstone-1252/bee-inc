@@ -610,12 +610,23 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 	font-size: calc(1.25rem / 1.125)
 }
 
-.text-price-add-to-cart-spacing {
-	padding-left: 1.125rem!important;
+h2.footer--heading {
+	font-size: 1.5rem!important;
 }
 
+.footer-contents-container {
+	margin-bottom: 3rem;
+}
 
 @media (min-width: 48rem) {
+
+	h2.footer--heading {
+		font-size: 3rem!important;
+	}
+
+	.footer-contents-container {
+		margin-bottom: unset;
+	}
 
 	.mens-product--card-heading {
 		font-size: 1.25rem!important;
@@ -626,7 +637,7 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 	}
 
 	.text-price-add-to-cart-spacing {
-		padding-left: unset!important;
+		padding-left: 1.125rem!important;
 	}
 
 	del[aria-hidden="true"] span.woocommerce-Price-amount {
