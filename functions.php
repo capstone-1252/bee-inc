@@ -479,3 +479,17 @@ function wc_attributes_exclude_size_shortcode($atts) {
     return '<div class="product-attributes">' . implode('', $items) . '</div>';
 }
 add_shortcode('attributes_no_size', 'wc_attributes_exclude_size_shortcode');
+
+// ----------------------------------------------------
+// JavaScript:
+
+function elluracollection_script() {
+    wp_enqueue_script(
+        'main-javascript',                                          
+        get_template_directory_uri() . '/assets/js/main.js',  
+        array(),                                                   
+        '1.0.0',                                                   
+        true                                                       
+    );
+}
+add_action( 'wp_enqueue_scripts', 'elluracollection_script' );
