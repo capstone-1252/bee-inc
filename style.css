@@ -343,6 +343,10 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 	border: 0.125rem solid var(--beige);
 }
 
+.shop-hero--intro-text {
+	font-size: 1rem!important;
+}
+
 /* 2 columns on mobile for the products: */
 @media (max-width: 48rem) {
 
@@ -559,9 +563,10 @@ input.wp-block-search__input:hover {
 	text-align: left !important;
 }
 
-h2.mens-product--card-heading {
+.mens-product--card-heading {
 	margin-inline-start: 0 !important;
 	margin-inline-end: 0 !important;
+	font-size: 1rem!important;
 }
 
 ul.wc-block-product-template__responsive.columns-4 li {
@@ -603,7 +608,16 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 	padding-left: 1.125rem!important;
 }
 
+
 @media (min-width: 48rem) {
+
+	.mens-product--card-heading {
+		font-size: 1.25rem!important;
+	}
+
+	.shop-hero--intro-text {
+		font-size: 1.25rem!important;
+	}
 
 	.text-price-add-to-cart-spacing {
 		padding-left: unset!important;
@@ -819,4 +833,29 @@ hr {
 	border: 1px solid #D2B391 !important;
 }
 
+div.wp-block-woocommerce-empty-mini-cart-contents-block .wc-block-components-button.wc-block-mini-cart__shopping-button.wp-block-woocommerce-mini-cart-shopping-button-block {
+	text-transform: uppercase;
+	font-weight: 400;
+	background-color: var(--beige);
+	border-radius: 1rem;
+}
 
+.product-archive-list-container .wc-block-components-product-button__button:not(.add_to_cart_button) {
+	visibility: hidden;
+}
+
+.product-archive-list-container--price-filter-container input {
+	border-radius: 1rem!important;
+	border: 0.0625rem solid var(--beige)!important;
+}
+
+.product-archive-list-container div.wc-block-components-product-sale-badge {
+	top: 0!important;
+	right: 0!important;
+	background-color: #a32424!important;
+	border-top-left-radius: 0rem!important;
+	border-top-right-radius: 0rem!important;
+	border-bottom-right-radius: 0rem!important;
+	border-bottom-left-radius: 1rem!important;
+	border: unset!important;
+}
