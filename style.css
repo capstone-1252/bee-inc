@@ -406,6 +406,10 @@ h2.womens-second-products-heading {
 	box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
 
+.shop-product-card--section {
+	box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+}
+
 .is-layout-constrained>.alignright {
 	float: unset !important;
 }
@@ -582,11 +586,13 @@ ul.wc-block-product-template__responsive.columns-4 li {
 	margin-inline-end: 0 !important;
 }
 
-.product-card--sale-text * {
+.product-card--sale-text *,
+.product-archive-list-container div.wc-block-components-product-sale-badge * {
 	font-size: 1rem;
 }
 
-.product-card--sale-text div {
+.product-card--sale-text div,
+.product-archive-list-container div.wc-block-components-product-sale-badge {
 	box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.18);
 }
 
@@ -631,7 +637,8 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 		font-size: 1.25rem!important;
 	}
 
-	.product-card--sale-text * {
+	.product-card--sale-text *,
+	.product-archive-list-container div.wc-block-components-product-sale-badge * {
 		font-size: 1.25rem;
 	}
 
@@ -840,7 +847,8 @@ div.wp-block-woocommerce-empty-mini-cart-contents-block .wc-block-components-but
 	border-radius: 1rem;
 }
 
-.product-archive-list-container .wc-block-components-product-button__button:not(.add_to_cart_button) {
+.product-archive-list-container .wc-block-components-product-button__button:not(.add_to_cart_button),
+.product-archive-list-container .wc-block-components-product-button__button:has(.product_type_variable) {
 	visibility: hidden;
 }
 
@@ -853,9 +861,14 @@ div.wp-block-woocommerce-empty-mini-cart-contents-block .wc-block-components-but
 	top: 0!important;
 	right: 0!important;
 	background-color: #a32424!important;
+	color: white!important;
 	border-top-left-radius: 0rem!important;
 	border-top-right-radius: 0rem!important;
 	border-bottom-right-radius: 0rem!important;
 	border-bottom-left-radius: 1rem!important;
 	border: unset!important;
+}
+
+div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-woocommerce-empty-mini-cart-contents-block, .wp-block-woocommerce-filled-mini-cart-contents-block {
+	background-color: var(--beige)!important;
 }
