@@ -633,6 +633,7 @@ del[aria-hidden="true"] span.woocommerce-Price-amount {
 h2.footer--heading {
 	font-size: 1.5rem!important;
 	font-weight: 400!important;
+	color: white!important;
 }
 
 h2.footer--heading:hover {
@@ -921,5 +922,9 @@ div.wp-block-woocommerce-empty-mini-cart-contents-block .wc-block-components-but
 }
 
 div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-woocommerce-empty-mini-cart-contents-block, .wp-block-woocommerce-filled-mini-cart-contents-block {
+	background-color: var(--dark-grey)!important;
+}
+
+div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-woocommerce-empty-mini-cart-contents-block, .wp-block-woocommerce-filled-mini-cart-contents-block a.wc-block-components-button {
 	background-color: var(--beige)!important;
 }
