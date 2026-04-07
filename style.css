@@ -436,7 +436,8 @@ h2.womens-second-products-heading {
 }
 
 .top-level-page-svg {
-	width: 5.5rem;
+	width: 15%;
+	max-width: 18.75rem;
 	height: auto;
 }
 

@@ -1,19 +1,129 @@
-<!-- wp:template-part {"slug":"header","theme":"elluratheme","tagName":"header","className":"site-header"} /-->
+<style>
+br {
+ display:none;
+}
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:query {"queryId":28,"query":{"perPage":10,"pages":0,"offset":0,"postType":"contact-page","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
-<div class="wp-block-query"><!-- wp:post-template -->
-<!-- wp:group {"style":{"spacing":{"blockGap":"0","padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"611px"}} -->
-<div class="wp-block-group" style="padding-right:0;padding-left:0"><!-- wp:post-title {"textAlign":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"fontSize":"xx-large"} /-->
+.contact-form {
+  max-width: 809px;
+  margin: 0 auto;
+}
 
-<!-- wp:post-content {"style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"fontSize":"extra-small"} /--></div>
-<!-- /wp:group -->
-<!-- /wp:post-template --></div>
-<!-- /wp:query -->
+.contact-form .cf-row {
+  margin-bottom: 18px;
+}
 
-<!-- wp:contact-form-7/contact-form-selector {"id":61,"hash":"5ca10fe","title":"Contact form"} -->
-<div class="wp-block-contact-form-7-contact-form-selector">[contact-form-7 id="5ca10fe" title="Contact form"]</div>
-<!-- /wp:contact-form-7/contact-form-selector --></div>
-<!-- /wp:group -->
+.contact-form .cf-small {
+  max-width: 396px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-<!-- wp:template-part {"slug":"footer","theme":"elluratheme","tagName":"footer","className":"site-footer"} /-->
+.contact-form .cf-message {
+  max-width: 100%;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #6f6f6f;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.contact-form input {
+  height: 36px;
+}
+
+.contact-form textarea {
+  height: 140px;
+  resize: none;
+}
+
+.contact-form .cf-submit {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.contact-form input[type="submit"] {
+  width: auto;
+  min-width: 92px;
+  height: 34px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.92;
+}
+
+/* Contact Form 7 response output */
+.contact-form .wpcf7-spinner {
+  display: block;
+  margin: 10px auto 0;
+}
+
+.contact-form .wpcf7-not-valid-tip {
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.contact-form .wpcf7-response-output {
+  margin: 16px auto 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .contact-form {
+    
+  }
+
+  .contact-form .cf-small {
+    max-width: 100%;
+  }
+
+  .contact-form textarea {
+    height: 190px;
+  }
+
+  .contact-form input[type="submit"] {
+    min-width: 110px;
+    height: 36px;
+  }
+}
+</style>
+
+<div class="contact-form">
+  <div class="cf-row cf-small">
+    <label>Name *</label>
+    [text* your-name akismet:author]
+  </div>
+
+  <div class="cf-row cf-small">
+    <label>Email *</label>
+    [email* your-email autocomplete:email]
+  </div>
+
+  <div class="cf-row cf-message">
+    <label>Message *</label>
+    [textarea* your-message]
+  </div>
+
+  <div class="cf-submit">
+    [submit "Submit Message"]
+  </div>
+</div>
