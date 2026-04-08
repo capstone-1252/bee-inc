@@ -971,8 +971,13 @@ div.wc-block-mini-cart__footer-actions * {
 }
 
 div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-woocommerce-empty-mini-cart-contents-block, .wp-block-woocommerce-filled-mini-cart-contents-block a.wc-block-components-button {
+	background-color: white!important;
+}
+
+div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-woocommerce-empty-mini-cart-contents-block div[data-block-name="woocommerce/mini-cart-shopping-button-block"] a {
 	background-color: var(--beige)!important;
 }
+
 
 h1.cat-hero--category-title {
 	font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.22), 1rem)!important;
