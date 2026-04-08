@@ -663,6 +663,11 @@ h2.footer--heading:hover {
 	margin-top: 1rem!important;
 }
 
+
+.large-collection--heading__new-line {
+	display: block;
+}
+
 @media (min-width: 48rem) {
 
 	.large-collection--card-paragraph {
