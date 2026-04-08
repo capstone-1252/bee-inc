@@ -668,8 +668,16 @@ h2.footer--heading:hover {
 	display: block;
 }
 
+.womens-subpage-main-heading {
+	font-size:clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.22), 1rem);
+}
+
 @media (min-width: 48rem) {
 
+	.womens-subpage-main-heading {
+		font-size: 1.25rem!important;
+	}
+	
 	.large-collection--card-paragraph {
 		font-size: 1.25rem!important;
 	}
