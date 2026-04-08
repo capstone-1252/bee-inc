@@ -1,4 +1,4 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","theme":"elluracollection","tagName":"header","className":"site-header"} /-->
 
 <!-- wp:group {"className":"top-level-page-desktop-svg-container","style":{"spacing":{"blockGap":"0","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group top-level-page-desktop-svg-container" style="margin-top:0;margin-bottom:0"><!-- wp:html -->
@@ -44,50 +44,42 @@
 <!-- /wp:html --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"tagName":"section","className":"mens-top-level-content-container","style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
-<section class="wp-block-group mens-top-level-content-container" style="margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80)"><!-- wp:post-title {"textAlign":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}}} /--></section>
+<!-- wp:group {"tagName":"section","className":"mens-top-level-content-container","style":{"spacing":{"blockGap":"0","margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained","contentSize":"100%"}} -->
+<section class="wp-block-group mens-top-level-content-container" style="margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80);padding-right:0;padding-left:0"><!-- wp:post-title {"textAlign":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}}} /--></section>
 <!-- /wp:group -->
 
-<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}}} -->
-<hr class="wp-block-separator has-alpha-channel-opacity" style="margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80)"/>
-<!-- /wp:separator -->
+<!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|80","left":"var:preset|spacing|80"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--80)"><!-- wp:separator {"className":"is-style-default","style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}},"color":{"background":"#d2b391"}},"twHeight":"2px"} -->
+<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-background is-style-default" style="margin-top:var(--wp--preset--spacing--80);margin-bottom:var(--wp--preset--spacing--80);background-color:#d2b391;color:#d2b391"/>
+<!-- /wp:separator --></div>
+<!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|30","left":"var:preset|spacing|30"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--30);margin-left:var(--wp--preset--spacing--30)">Effective Date: March 5, 2026</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-group"><!-- wp:query {"queryId":6,"query":{"perPage":10,"pages":0,"offset":0,"postType":"return-policy-page","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"48px"}}} -->
+<!-- wp:post-title {"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"fontSize":"medium"} /-->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)">Thank you for shopping with <strong>Ellura Collections</strong>. Please note that <strong>all items sold by Ellura Collections are final sale</strong>. This means that <strong>we do not accept returns, exchanges, or offer refunds</strong> on any purchases, except in cases where the item is <strong>damaged or defective upon arrival</strong>.</p>
-<!-- /wp:paragraph -->
+<!-- wp:post-content {"style":{"spacing":{"blockGap":"0","margin":{"top":"0","bottom":"0"},"padding":{"bottom":"0","top":"20px"}}},"fontSize":"medium"} /-->
+<!-- /wp:post-template -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)"><strong>1. Non-Returnable Items</strong></p>
-<!-- /wp:paragraph -->
+<!-- wp:query-pagination -->
+<!-- wp:query-pagination-previous /-->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)">All other items, including those that are <strong>unused, unwanted, or purchased in error</strong>, <strong>cannot be returned or exchanged</strong>.</p>
-<!-- /wp:paragraph -->
+<!-- wp:query-pagination-numbers /-->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)"><strong>2. Order Confirmation</strong></p>
-<!-- /wp:paragraph -->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
 
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)">Please carefully review your order before completing your purchase. Since all items are final sale, <strong>Ellura Collections is unable to cancel or modify orders once placed</strong>.</p>
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"placeholder":"Add text or blocks that will display when the query returns no results."} -->
+<p></p>
 <!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)"><strong>3. Contact Us</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50"}}}} -->
-<p style="margin-right:var(--wp--preset--spacing--50);margin-left:var(--wp--preset--spacing--50)">For questions about damaged or defective items, contact us. (Insert link soon)</p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
 <!-- /wp:group -->
 
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="469" viewBox="0 0 500 469" fill="none" style="display: block; margin-left: auto;">
   <path d="M501 469V0L0 469H501Z" fill="#D2B391"/>
 </svg>
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"elluracollection","tagName":"footer","className":"site-footer"} /-->
