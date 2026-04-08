@@ -427,69 +427,72 @@ function display_chartfield_content()
 }
 add_shortcode('chartfield_content', 'display_chartfield_content');
 
-function wc_attributes_exclude_size_shortcode($atts) {
-    global $product;
+function wc_attributes_exclude_size_shortcode($atts)
+{
+	global $product;
 
-    if (!$product) return '';
+	if (!$product) return '';
 
-    $attributes = $product->get_attributes();
-    $exclude = ['pa_size']; // excluded attribute slugs
+	$attributes = $product->get_attributes();
+	$exclude = ['pa_size']; // excluded attribute slugs
 
-    $items = [];
+	$items = [];
 
-    // Add product attributes except excluded ones
-    if (!empty($attributes)) {
-        foreach ($attributes as $attribute) {
-            $attr_name = $attribute->get_name();
+	// Add product attributes except excluded ones
+	if (!empty($attributes)) {
+		foreach ($attributes as $attribute) {
+			$attr_name = $attribute->get_name();
 
-            if (in_array($attr_name, $exclude, true)) {
-                continue;
-            }
+			if (in_array($attr_name, $exclude, true)) {
+				continue;
+			}
 
-            if ($attribute->get_visible()) {
-                $label = wc_attribute_label($attr_name);
+			if ($attribute->get_visible()) {
+				$label = wc_attribute_label($attr_name);
 
-                if ($attribute->is_taxonomy()) {
-                    $values = wc_get_product_terms(
-                        $product->get_id(),
-                        $attr_name,
-                        ['fields' => 'names']
-                    );
-                } else {
-                    $values = $attribute->get_options();
-                }
+				if ($attribute->is_taxonomy()) {
+					$values = wc_get_product_terms(
+						$product->get_id(),
+						$attr_name,
+						['fields' => 'names']
+					);
+				} else {
+					$values = $attribute->get_options();
+				}
 
-                if (!empty($values)) {
-                    $items[] = '<div class="product-attribute-item"><strong>' . esc_html($label) . ':</strong> ' . esc_html(implode(', ', $values)) . '</div>';
-                }
-            }
-        }
-    }
+				if (!empty($values)) {
+					$items[] = '<div class="product-attribute-item"><strong>' . esc_html($label) . ':</strong> ' . esc_html(implode(', ', $values)) . '</div>';
+				}
+			}
+		}
+	}
 
-    // Add dimensions
-    $dimensions = wc_format_dimensions($product->get_dimensions(false));
-    if (!empty($dimensions)) {
-        $items[] = '<div class="product-attribute-item"><strong>Dimensions:</strong> ' . esc_html($dimensions) . '</div>';
-    }
+	// Add dimensions
+	$dimensions = wc_format_dimensions($product->get_dimensions(false));
+	if (!empty($dimensions)) {
+		$items[] = '<div class="product-attribute-item"><strong>Dimensions:</strong> ' . esc_html($dimensions) . '</div>';
+	}
 
-    if (empty($items)) {
-        return '';
-    }
+	if (empty($items)) {
+		return '';
+	}
 
-    return '<div class="product-attributes">' . implode('', $items) . '</div>';
+	return '<div class="product-attributes">' . implode('', $items) . '</div>';
 }
 add_shortcode('attributes_no_size', 'wc_attributes_exclude_size_shortcode');
 
 // ----------------------------------------------------
 // JavaScript:
 
-function elluracollection_script() {
-    wp_enqueue_script(
-        'main-javascript',                                          
-        get_template_directory_uri() . '/assets/js/main.js',  
-        array(),                                                   
-        '1.0.0',                                                   
-        true                                                       
-    );
+function elluracollection_script()
+{
+	wp_enqueue_script(
+		'main-javascript',
+		get_template_directory_uri() . '/assets/js/main.js',
+		array(),
+		'1.0.0',
+		true
+	);
 }
-add_action( 'wp_enqueue_scripts', 'elluracollection_script' );
+add_action('wp_enqueue_scripts', 'elluracollection_script');
+

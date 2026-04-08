@@ -655,7 +655,23 @@ h2.footer--heading:hover {
 	text-decoration-color: white!important;
 }
 
+.large-collection--card-title {
+	font-size: 1.125rem!important;
+}
+
+.large-collection--card-paragraph {
+	margin-top: 1rem!important;
+}
+
 @media (min-width: 48rem) {
+
+	.large-collection--card-paragraph {
+		font-size: 1.25rem!important;
+	}
+
+	.large-collection--card-title {
+		font-size: 2rem!important;
+	}
 
 	.wc-block-components-product-image .wc-block-components-product-sale-badge--align-right * {
 		font-size: 1.25rem!important;
@@ -937,4 +953,3 @@ h1.cat-hero--category-title {
 	font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.22), 1rem)!important;
 	text-transform: uppercase!important;
 }
-
