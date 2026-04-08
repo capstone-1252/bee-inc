@@ -6,13 +6,14 @@ function equalizeCardTitles() {
 
   productSections.forEach((productSection) => {
     const cards = productSection.querySelectorAll(".product-card");
-
     const usedRows = [];
     const rows = [];
 
     cards.forEach((card) => {
-      const rowKey = card.offsetTop;
-      const existingRowIndex = usedRows.indexOf(rowKey);
+      const rowKey = Math.round(card.getBoundingClientRect().top);
+      const existingRowIndex = usedRows.findIndex(
+        (existingKey) => Math.abs(existingKey - rowKey) < 10
+      );
 
       if (existingRowIndex === -1) {
         usedRows.push(rowKey);
@@ -22,13 +23,13 @@ function equalizeCardTitles() {
       }
     });
 
-    rows.forEach((individualRowCardAtRow) => {
+    rows.forEach((rowCards) => {
       const titles = [];
       const prices = [];
 
-      individualRowCardAtRow.forEach((card) => {
-        const title = card.querySelector("h2, h3");
-        const price = card.querySelector(".product-price");
+      rowCards.forEach((individualCard) => {
+        const title = individualCard.querySelector("h2, h3");
+        const price = individualCard.querySelector(".product-price");
 
         if (title) {
           titles.push(title);
@@ -39,7 +40,7 @@ function equalizeCardTitles() {
         }
       });
 
-      // ----------------------------------------------------
+      // -----------------------------------------
       titles.forEach(
         (individualTitle) => (individualTitle.style.minHeight = "")
       );
@@ -56,18 +57,22 @@ function equalizeCardTitles() {
         );
       }
 
-      // ----------------------------------------------------
-      prices.forEach((price) => (price.style.minHeight = ""));
+      // -----------------------------------------
+      prices.forEach(
+        (individualPrice) => (individualPrice.style.minHeight = "")
+      );
 
       const maxPriceRem =
-        Math.max(...prices.map((price) => price.offsetHeight)) / rootFontSize;
+        Math.max(
+          ...prices.map((individualPrice) => individualPrice.offsetHeight)
+        ) / rootFontSize;
 
       if (maxPriceRem > 2.5) {
         prices.forEach(
-          (price) => (price.style.minHeight = maxPriceRem + "rem")
+          (individualPrice) =>
+            (individualPrice.style.minHeight = maxPriceRem + "rem")
         );
       }
-
     });
   });
 }
