@@ -197,6 +197,10 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 	border-radius: 1rem;
 }
 
+.cta--primary:hover {
+	text-decoration: underline;
+}
+
 .cta--primary a {
 	color: white;
 }
@@ -739,7 +743,6 @@ h2.footer--heading:hover {
 
 	.mens-products--card {
 		padding: 1rem;
-		padding-bottom: 4rem;
 	}
 
 	.main-level-page-heading {
@@ -929,3 +932,9 @@ div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-wooco
 div[data-block-name="woocommerce/empty-mini-cart-contents-block"].wp-block-woocommerce-empty-mini-cart-contents-block, .wp-block-woocommerce-filled-mini-cart-contents-block a.wc-block-components-button {
 	background-color: var(--beige)!important;
 }
+
+h1.cat-hero--category-title {
+	font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.22), 1rem)!important;
+	text-transform: uppercase!important;
+}
+
