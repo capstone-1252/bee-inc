@@ -1045,3 +1045,8 @@ div.wp-block-woocommerce-mini-cart-contents div.wc-block-mini-cart__empty-cart-w
 .essentials--heading {
 	text-align: center!important;
 }
+
+.security-about, .high-quality-about {
+	height: 100%;
+}
+
