@@ -993,3 +993,27 @@ div.wp-block-woocommerce-mini-cart-items-block div.wc-block-components-product-b
 	color: black!important;
 	border-radius: 1rem!important;
 }
+
+div.wc-block-components-drawer__close-wrapper button.wc-block-components-button.wc-block-components-drawer__close {
+	box-shadow: unset!important;
+}
+
+div.wc-block-components-drawer__close-wrapper button.wc-block-components-button.wc-block-components-drawer__close svg {
+	color: black!important;
+	width: 2rem!important;
+	height: auto!important;
+}
+
+div.wp-block-woocommerce-mini-cart-contents div.wc-block-mini-cart__empty-cart-wrapper p.has-text-align-center {
+	color: black!important;
+}
+
+.collection-card--mens-container,
+.collection-card--childrens-container {
+	height: unset!important;
+}
+
+.collection-card--childrens,
+.collection-card--mens {
+	height: 100%!important;
+}
