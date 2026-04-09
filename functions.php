@@ -490,7 +490,7 @@ function elluracollection_script()
 		'main-javascript',
 		get_template_directory_uri() . '/assets/js/main.js',
 		array(),
-		'1.0.0',
+		filemtime(get_template_directory() . '/assets/js/main.js'),
 		true
 	);
 }
