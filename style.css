@@ -1017,3 +1017,7 @@ div.wp-block-woocommerce-mini-cart-contents div.wc-block-mini-cart__empty-cart-w
 .collection-card--mens {
 	height: 100%!important;
 }
+
+.woocommerce div.single-item-card--product-price * {
+	color: black!important;
+}
