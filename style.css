@@ -1037,3 +1037,11 @@ div.wp-block-woocommerce-mini-cart-contents div.wc-block-mini-cart__empty-cart-w
 .woocommerce div.single-item-card--product-price * {
 	color: black !important;
 }
+
+.essentials--svg {
+	margin-bottom: -1.5rem!important;
+}
+
+.essentials--heading {
+	text-align: center!important;
+}
