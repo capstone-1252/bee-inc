@@ -496,3 +496,8 @@ function elluracollection_script()
 }
 add_action('wp_enqueue_scripts', 'elluracollection_script');
 
+function inside_site_title_shortcode()
+{
+	return '<h2 class="wp-block-heading has-large-font-size" style="text-transform: uppercase; text-align:center;">INSIDE ' . get_bloginfo('name') . '</h2>';
+}
+add_shortcode('inside_site_title', 'inside_site_title_shortcode');
