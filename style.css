@@ -1070,3 +1070,8 @@ div.wc-block-cart__submit-container a {
 .about-us-page-heading {
 	font-size:clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.22), 1rem)!important;
 }
+
+.form-submit input.wp-block-button__link.wp-element-button {
+	border-radius: 1rem;
+	background-color: var(--beige)!important;
+}
