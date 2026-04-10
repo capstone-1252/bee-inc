@@ -1050,3 +1050,14 @@ div.wp-block-woocommerce-mini-cart-contents div.wc-block-mini-cart__empty-cart-w
 	height: 100%;
 }
 
+.utility-bottom-section--svg {
+	max-width: 31.25rem!important;
+	overflow: hidden!important;
+}
+
+/* -------------------- */
+.home-page--contents li:last-of-type div.divider {
+	display: none!important;
+}
+/* -------------------- */
+

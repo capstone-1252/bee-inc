@@ -79,3 +79,58 @@ function equalizeCardTitles() {
 
 document.addEventListener("DOMContentLoaded", equalizeCardTitles);
 window.addEventListener("resize", equalizeCardTitles);
+
+// --------------------------------------------------------
+function equalizeCollectionCardDescriptions() {
+  const cards = document.querySelectorAll(".large-collection--equal-card");
+  const rootFontSize = parseFloat(
+    getComputedStyle(document.documentElement).fontSize
+  );
+
+  const usedRows = [];
+  const rows = [];
+
+  cards.forEach((card) => {
+    const rowKey = Math.round(card.getBoundingClientRect().top);
+    const existingRowIndex = usedRows.findIndex(
+      (existingKey) => Math.abs(existingKey - rowKey) < 10
+    );
+
+    if (existingRowIndex === -1) {
+      usedRows.push(rowKey);
+      rows.push([card]);
+    } else {
+      rows[existingRowIndex].push(card);
+    }
+  });
+
+  rows.forEach((rowCards) => {
+    if (rowCards.length < 2) return;
+
+    const descriptions = rowCards.map((card) =>
+      card.querySelector(".large-collection--equal-card-description")
+    );
+
+    descriptions.forEach(
+      (individualDescription) => (individualDescription.style.minHeight = "")
+    );
+
+    const maxDescRem =
+      Math.max(
+        ...descriptions.map(
+          (individualDescription) => individualDescription.offsetHeight
+        )
+      ) / rootFontSize;
+
+    descriptions.forEach(
+      (individualDescription) =>
+        (individualDescription.style.minHeight = maxDescRem + "rem")
+    );
+  });
+}
+
+document.addEventListener(
+  "DOMContentLoaded",
+  equalizeCollectionCardDescriptions
+);
+window.addEventListener("resize", equalizeCollectionCardDescriptions);
