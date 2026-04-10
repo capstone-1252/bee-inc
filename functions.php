@@ -396,6 +396,8 @@ add_action('wp_body_open', function () {
       </div>';
 });
 
+// ----------------------------------------------------
+
 function display_chartfield_content()
 {
 	$related_post = get_field('chartfield');
@@ -426,6 +428,8 @@ function display_chartfield_content()
 	return $output;
 }
 add_shortcode('chartfield_content', 'display_chartfield_content');
+
+// ----------------------------------------------------
 
 function wc_attributes_exclude_size_shortcode($atts)
 {
@@ -496,12 +500,15 @@ function elluracollection_script()
 }
 add_action('wp_enqueue_scripts', 'elluracollection_script');
 
+// ----------------------------------------------------
+
 function inside_site_title_shortcode()
 {
 	return '<h2 class="wp-block-heading has-large-font-size" style="text-transform: uppercase; text-align:center;">INSIDE ' . get_bloginfo('name') . '</h2>';
 }
 add_shortcode('inside_site_title', 'inside_site_title_shortcode');
 
+// ----------------------------------------------------
 
 add_action( 'woocommerce_thankyou', 'clear_address_after_purchase', 10, 1 );
 
@@ -523,3 +530,13 @@ function clear_address_after_purchase( $order_id ) {
         }
     }
 }
+
+// ----------------------------------------------------
+// Redirect from tags template:
+
+add_action('template_redirect', function() {
+    if (is_product_tag(array('newest-products', 'best-sellers', 'tag'))) {
+        wp_redirect(home_url( '/' ), 301 );
+        exit;
+    }
+});

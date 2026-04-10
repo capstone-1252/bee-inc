@@ -1066,3 +1066,7 @@ div.wc-block-cart__submit-container a {
 	background-color: var(--beige);
 	border-radius: 1rem!important;
 }
+
+.about-us-page-heading {
+	font-size:clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.22), 1rem)!important;
+}
