@@ -1061,3 +1061,8 @@ div.wp-block-woocommerce-mini-cart-contents div.wc-block-mini-cart__empty-cart-w
 }
 /* -------------------- */
 
+.wc-block-checkout__actions button.wc-block-components-checkout-place-order-button,
+div.wc-block-cart__submit-container a {
+	background-color: var(--beige);
+	border-radius: 1rem!important;
+}
