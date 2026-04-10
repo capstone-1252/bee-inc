@@ -369,7 +369,18 @@ ul li.wp-block-navigation-item.wp-block-navigation-link:last-child {
 		width: 3rem;
 		height: 2.125rem;
 	}
+}
 
+@media (max-width: 64rem) {
+	.hero--content-container {
+		order: -1;
+	}
+	
+	.hero--img-container {
+		order: 2;
+		position: relative;
+		left: -7%;
+	}
 }
 
 div.thobes-container,
@@ -1074,4 +1085,9 @@ div.wc-block-cart__submit-container a {
 .form-submit input.wp-block-button__link.wp-element-button {
 	border-radius: 1rem;
 	background-color: var(--beige)!important;
+}
+
+.hero--content-container {
+	max-width: 44.25rem;
+	margin: auto!important; 
 }
