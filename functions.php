@@ -510,21 +510,16 @@ add_shortcode('inside_site_title', 'inside_site_title_shortcode');
 
 // ----------------------------------------------------
 
-add_action( 'woocommerce_thankyou', 'clear_address_after_purchase', 10, 1 );
+add_action('woocommerce_thankyou', 'clear_address_after_purchase', 10, 1);
 
-function clear_address_after_purchase( $order_id ) {
-    $order = wc_get_order( $order_id );
-    $user_id = $order->get_user_id();
+function clear_address_after_purchase($order_id)
+{
+	$order = wc_get_order($order_id);
+	$user_id = $order->get_user_id();
 
-    if ( $user_id ) {
-    
-        $fields = array(
-            'billing_first_name', 'billing_last_name', 'billing_address_1', 
-            'billing_address_2', 'billing_city', 'billing_postcode', 'billing_phone',
-            'shipping_first_name', 'shipping_last_name', 'shipping_address_1', 
-            'shipping_address_2', 'shipping_city', 'shipping_postcode'
-        );
+	if ($user_id) {
 
+<<<<<<< Updated upstream
         foreach ( $fields as $field ) {
             update_user_meta( $user_id, $field, '' );
         }
@@ -540,3 +535,32 @@ add_action('template_redirect', function() {
         exit;
     }
 });
+=======
+		$fields = array(
+			'billing_first_name',
+			'billing_last_name',
+			'billing_address_1',
+			'billing_address_2',
+			'billing_city',
+			'billing_postcode',
+			'billing_phone',
+			'shipping_first_name',
+			'shipping_last_name',
+			'shipping_address_1',
+			'shipping_address_2',
+			'shipping_city',
+			'shipping_postcode'
+		);
+
+		foreach ($fields as $field) {
+			update_user_meta($user_id, $field, '');
+		}
+	}
+}
+
+function inside_site_title_shortcode()
+{
+	return '<h2 class="wp-block-heading has-large-font-size" style="text-transform: uppercase; text-align:center;">THE MAKING OF ' . get_bloginfo('name') . '</h2>';
+}
+add_shortcode('inside_site_title', 'inside_site_title_shortcode');
+>>>>>>> Stashed changes
