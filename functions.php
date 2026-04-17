@@ -519,23 +519,6 @@ function clear_address_after_purchase($order_id)
 
 	if ($user_id) {
 
-<<<<<<< Updated upstream
-        foreach ( $fields as $field ) {
-            update_user_meta( $user_id, $field, '' );
-        }
-    }
-}
-
-// ----------------------------------------------------
-// Redirect from tags template:
-
-add_action('template_redirect', function() {
-    if (is_product_tag(array('newest-products', 'best-sellers', 'tag'))) {
-        wp_redirect(home_url( '/' ), 301 );
-        exit;
-    }
-});
-=======
 		$fields = array(
 			'billing_first_name',
 			'billing_last_name',
@@ -558,9 +541,19 @@ add_action('template_redirect', function() {
 	}
 }
 
-function inside_site_title_shortcode()
+// ----------------------------------------------------
+// Redirect from tags template:
+
+add_action('template_redirect', function () {
+	if (is_product_tag(array('newest-products', 'best-sellers', 'tag'))) {
+		wp_redirect(home_url('/'), 301);
+		exit;
+	}
+});
+
+
+function making_site_title_shortcode()
 {
-	return '<h2 class="wp-block-heading has-large-font-size" style="text-transform: uppercase; text-align:center;">THE MAKING OF ' . get_bloginfo('name') . '</h2>';
+	return '<h2 class="wp-block-heading has-large-font-size" style="text-transform: uppercase;">The making of ' . get_bloginfo('name') . '</h2>';
 }
-add_shortcode('inside_site_title', 'inside_site_title_shortcode');
->>>>>>> Stashed changes
+add_shortcode('making_site_title', 'making_site_title_shortcode');
